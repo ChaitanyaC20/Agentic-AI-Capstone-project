@@ -1,0 +1,1002 @@
+[
+  {
+    "patient_input":"I have been experiencing cramps in my legs for a few days now. I think there might be a bruise on my calves, but I'm not sure.",
+    "true_triage":"WAIT",
+    "diagnosis":"varicose veins",
+    "predicted_triage":"WAIT",
+    "correct":true,
+    "symptoms_state":"[\"cramps in my legs\", \"possible bruise on my calves\"]",
+    "severity_state":"{\"severity\": 2, \"reason\": \"Cramps in the legs and a possible bruise on the calves suggest a need for medical attention, as these symptoms could be indicative of muscle strain or injury.\"}",
+    "triage_state":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"calculate_india_news2 returned LOW risk level with LOW confidence and no need to escalate\"}",
+    "response_state":"Based on the information provided, you have experienced cramps in your legs for a few days and there might be a possible bruise on your calves. The severity score for these symptoms is 2, indicating a need for medical attention due to the possibility of muscle strain or injury.\n\nGiven the symptoms and the triage level determined by the decision support guidance, you should:\n\n- Wait and monitor the situation.\n- If the cramps persist or worsen, or if you notice any new symptoms, seek medical attention from a healthcare professional.\n- Avoid strenuous activities that could exacerbate the condition.\n- Do not ignore persistent or worsening symptoms.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I have been experiencing cramps in my legs for a few days now. I think there might be a bruise on my calves, but I'm not sure.",
+      "symptoms":"[\"cramps in my legs\", \"possible bruise on my calves\"]",
+      "severity_json":"{\"severity\": 2, \"reason\": \"Cramps in the legs and a possible bruise on the calves suggest a need for medical attention, as these symptoms could be indicative of muscle strain or injury.\"}",
+      "followup":"{\"followup\": \"Given the symptoms you're experiencing, it's important to get an assessment from a healthcare professional. Have you taken any measures to alleviate the cramps or noticed any patterns in when they occur?\"}",
+      "triage_decision":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"calculate_india_news2 returned LOW risk level with LOW confidence and no need to escalate\"}",
+      "final_response":"Based on the information provided, you have experienced cramps in your legs for a few days and there might be a possible bruise on your calves. The severity score for these symptoms is 2, indicating a need for medical attention due to the possibility of muscle strain or injury.\n\nGiven the symptoms and the triage level determined by the decision support guidance, you should:\n\n- Wait and monitor the situation.\n- If the cramps persist or worsen, or if you notice any new symptoms, seek medical attention from a healthcare professional.\n- Avoid strenuous activities that could exacerbate the condition.\n- Do not ignore persistent or worsening symptoms.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I'm having trouble breathing. I'm coughing up a lot of mucus. My chest hurts. I'm sweating a lot. I feel really sick.",
+    "true_triage":"ER",
+    "diagnosis":"pneumonia",
+    "predicted_triage":"ER",
+    "correct":true,
+    "symptoms_state":"[\"I'm having trouble breathing.\", \"I'm coughing up a lot of mucus.\", \"My chest hurts.\", \"I'm sweating a lot.\", \"I feel really sick.\"]",
+    "severity_state":"{\"severity\": 5, \"reason\": \"The patient is experiencing severe respiratory symptoms including trouble breathing, coughing up a lot of mucus, chest pain, and profuse sweating. They also report feeling very unwell.\"}",
+    "triage_state":"{\n  \"triage_level\": \"ER\",\n  \"rule_applied\": \"search_symptom_cases_db\"\n}",
+    "response_state":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nBased on the symptoms reported, including trouble breathing, coughing up a lot of mucus, chest pain, and profuse sweating, the severity level is rated as 5, with the primary reason being severe respiratory symptoms. Given the current situation, it is recommended that the individual should immediately contact 108 (ambulance) or go to the nearest government hospital\/CHC\/PHC. Never use \"911\" as this is for the United States.",
+    "full_state":{
+      "patient_input":"I'm having trouble breathing. I'm coughing up a lot of mucus. My chest hurts. I'm sweating a lot. I feel really sick.",
+      "symptoms":"[\"I'm having trouble breathing.\", \"I'm coughing up a lot of mucus.\", \"My chest hurts.\", \"I'm sweating a lot.\", \"I feel really sick.\"]",
+      "severity_json":"{\"severity\": 5, \"reason\": \"The patient is experiencing severe respiratory symptoms including trouble breathing, coughing up a lot of mucus, chest pain, and profuse sweating. They also report feeling very unwell.\"}",
+      "followup":"{\n  \"severity\": 5,\n  \"reason\": \"The patient is experiencing severe respiratory symptoms including trouble breathing, coughing up a lot of mucus, chest pain, and profuse sweating. They also report feeling very unwell.\"\n}",
+      "triage_decision":"{\n  \"triage_level\": \"ER\",\n  \"rule_applied\": \"search_symptom_cases_db\"\n}",
+      "final_response":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nBased on the symptoms reported, including trouble breathing, coughing up a lot of mucus, chest pain, and profuse sweating, the severity level is rated as 5, with the primary reason being severe respiratory symptoms. Given the current situation, it is recommended that the individual should immediately contact 108 (ambulance) or go to the nearest government hospital\/CHC\/PHC. Never use \"911\" as this is for the United States.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I have a burning pain in my stomach that comes and goes. I also have a loss of appetite and energy and often feel very fatigued.",
+    "true_triage":"DOCTOR",
+    "diagnosis":"peptic ulcer disease",
+    "predicted_triage":"WAIT",
+    "correct":false,
+    "symptoms_state":"[\"burning pain in my stomach\", \"loss of appetite\", \"energy\", \"often feel very fatigued\"]",
+    "severity_state":"{\"severity\": 3, \"reason\": \"The symptoms provided indicate a possible gastrointestinal issue, which can cause burning pain in the stomach, loss of appetite, fatigue, and reduced energy levels. This combination is moderate in severity and warrants further medical evaluation.\"}",
+    "triage_state":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"No cases found in the database, proceeding to NEWS2 calculation.\"}",
+    "response_state":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nBased on the symptoms you've described, which include burning pain in your stomach, loss of appetite, energy, and often feeling very fatigued, there is a possibility of a gastrointestinal issue. The severity of your condition, as determined by the severity scorer, is moderate, warranting further medical evaluation. \n\nGiven that no cases matching your symptoms were found in the database, we will proceed with the NEWS2 (Numerical Evaluation of Severity) calculation. Please be prepared to answer a few questions about your current condition.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I have a burning pain in my stomach that comes and goes. I also have a loss of appetite and energy and often feel very fatigued.",
+      "symptoms":"[\"burning pain in my stomach\", \"loss of appetite\", \"energy\", \"often feel very fatigued\"]",
+      "severity_json":"{\"severity\": 3, \"reason\": \"The symptoms provided indicate a possible gastrointestinal issue, which can cause burning pain in the stomach, loss of appetite, fatigue, and reduced energy levels. This combination is moderate in severity and warrants further medical evaluation.\"}",
+      "followup":"{\n  \"severity\": 3,\n  \"reason\": \"The symptoms you're experiencing, including burning pain in your stomach, loss of appetite, energy, and often feeling very fatigued, suggest a possible gastrointestinal issue. This combination indicates moderate severity and warrants further medical evaluation.\"\n}",
+      "triage_decision":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"No cases found in the database, proceeding to NEWS2 calculation.\"}",
+      "final_response":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nBased on the symptoms you've described, which include burning pain in your stomach, loss of appetite, energy, and often feeling very fatigued, there is a possibility of a gastrointestinal issue. The severity of your condition, as determined by the severity scorer, is moderate, warranting further medical evaluation. \n\nGiven that no cases matching your symptoms were found in the database, we will proceed with the NEWS2 (Numerical Evaluation of Severity) calculation. Please be prepared to answer a few questions about your current condition.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I'm burning up, and I can't catch my breath. I'm sweating and shivering, and I'm so tired. My heart is racing, and I'm coughing up brown stuff.",
+    "true_triage":"ER",
+    "diagnosis":"pneumonia",
+    "predicted_triage":"WAIT",
+    "correct":false,
+    "symptoms_state":"[\"I'm burning up\", 'I can\\'t catch my breath', 'I\\'m sweating and shivering', 'I\\'m so tired', 'My heart is racing', 'I\\'m coughing up brown stuff']",
+    "severity_state":"{\"severity\": 5, \"reason\": \"The symptoms provided indicate a severe condition, including high fever, difficulty breathing, excessive sweating and shivering, extreme fatigue, a racing heart, and coughing up brown phlegm. These symptoms are consistent with a serious illness or condition that requires immediate medical attention.\"}",
+    "triage_state":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"setup_db.py not run, need to build case database first.\"}",
+    "response_state":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\n**Triage Level:** WAIT\n\n**Rule Applied:** `setup_db.py` not run, need to build case database first.\n\n**Severity Reason:** The symptoms provided indicate a severe condition, including high fever, difficulty breathing, excessive sweating and shivering, extreme fatigue, a racing heart, and coughing up brown phlegm. These symptoms are consistent with a serious illness or condition that requires immediate medical attention.\n\nGiven the severity of your symptoms, I would advise you to seek immediate medical help. Due to the need to build the case database, we are currently in a wait state. Please contact emergency services (108) or go to the nearest government hospital, CHC, or PHC for immediate attention.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I'm burning up, and I can't catch my breath. I'm sweating and shivering, and I'm so tired. My heart is racing, and I'm coughing up brown stuff.",
+      "symptoms":"[\"I'm burning up\", 'I can\\'t catch my breath', 'I\\'m sweating and shivering', 'I\\'m so tired', 'My heart is racing', 'I\\'m coughing up brown stuff']",
+      "severity_json":"{\"severity\": 5, \"reason\": \"The symptoms provided indicate a severe condition, including high fever, difficulty breathing, excessive sweating and shivering, extreme fatigue, a racing heart, and coughing up brown phlegm. These symptoms are consistent with a serious illness or condition that requires immediate medical attention.\"}",
+      "followup":"{\n  \"severity\": 5,\n  \"reason\": \"The symptoms you described, including high fever, difficulty breathing, excessive sweating and shivering, extreme fatigue, a racing heart, and coughing up brown phlegm, are consistent with a serious illness or condition that requires immediate medical attention. Please seek medical help immediately.\"\n}",
+      "triage_decision":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"setup_db.py not run, need to build case database first.\"}",
+      "final_response":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\n**Triage Level:** WAIT\n\n**Rule Applied:** `setup_db.py` not run, need to build case database first.\n\n**Severity Reason:** The symptoms provided indicate a severe condition, including high fever, difficulty breathing, excessive sweating and shivering, extreme fatigue, a racing heart, and coughing up brown phlegm. These symptoms are consistent with a serious illness or condition that requires immediate medical attention.\n\nGiven the severity of your symptoms, I would advise you to seek immediate medical help. Due to the need to build the case database, we are currently in a wait state. Please contact emergency services (108) or go to the nearest government hospital, CHC, or PHC for immediate attention.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I've been having a fever, chills, and nausea. I've also been sweating a lot and have a headache. My muscles are sore and I've been scratching a lot.",
+    "true_triage":"DOCTOR",
+    "diagnosis":"malaria",
+    "predicted_triage":"ER",
+    "correct":false,
+    "symptoms_state":"[\"fever\", \"chills\", \"nausea\", \"sweating\", \"headache\", \"muscles are sore\", \"scratching\"]",
+    "severity_state":"{\"severity\": 3, \"reason\": \"Based on the symptoms reported, the patient has a combination of fever, chills, nausea, sweating, headache, muscle soreness, and itching. These symptoms are common in conditions such as the flu or a viral infection, and the severity score is rated as 3 due to the presence of multiple discomforts.\"}",
+    "triage_state":"{\"triage_level\": \"ER\", \"rule_applied\": \"search_symptom_cases_db returned an ER triage level based on the provided symptoms.\"}",
+    "response_state":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nTriage: {\"triage_level\": \"ER\", \"rule_applied\": \"search_symptom_cases_db returned an ER triage level based on the provided symptoms.\"}\n\nSeverity: 3\n\nReason: Based on the symptoms reported, the patient has a combination of fever, chills, nausea, sweating, headache, muscle soreness, and itching. These symptoms are common in conditions such as the flu or a viral infection, and the severity score is rated as 3 due to the presence of multiple discomforts.\n\nGiven the severity level and the symptoms you're experiencing, it is recommended that you call 108 (ambulance) or go to the nearest government hospital\/CHC\/PHC. NEVER say \"911\" -- this is India.",
+    "full_state":{
+      "patient_input":"I've been having a fever, chills, and nausea. I've also been sweating a lot and have a headache. My muscles are sore and I've been scratching a lot.",
+      "symptoms":"[\"fever\", \"chills\", \"nausea\", \"sweating\", \"headache\", \"muscles are sore\", \"scratching\"]",
+      "severity_json":"{\"severity\": 3, \"reason\": \"Based on the symptoms reported, the patient has a combination of fever, chills, nausea, sweating, headache, muscle soreness, and itching. These symptoms are common in conditions such as the flu or a viral infection, and the severity score is rated as 3 due to the presence of multiple discomforts.\"}",
+      "followup":"{\n  \"severity\": 3,\n  \"reason\": \"Based on the symptoms you're experiencing, including fever, chills, nausea, sweating, headache, muscle soreness, and itching, these are common in conditions like the flu or a viral infection. The severity score is rated as 3 because you have multiple discomforts.\"\n}",
+      "triage_decision":"{\"triage_level\": \"ER\", \"rule_applied\": \"search_symptom_cases_db returned an ER triage level based on the provided symptoms.\"}",
+      "final_response":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nTriage: {\"triage_level\": \"ER\", \"rule_applied\": \"search_symptom_cases_db returned an ER triage level based on the provided symptoms.\"}\n\nSeverity: 3\n\nReason: Based on the symptoms reported, the patient has a combination of fever, chills, nausea, sweating, headache, muscle soreness, and itching. These symptoms are common in conditions such as the flu or a viral infection, and the severity score is rated as 3 due to the presence of multiple discomforts.\n\nGiven the severity level and the symptoms you're experiencing, it is recommended that you call 108 (ambulance) or go to the nearest government hospital\/CHC\/PHC. NEVER say \"911\" -- this is India.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I have varicose veins in my legs. They are swollen and the blood vessels are more visible than usual. The swelling seems to be getting worse over time.",
+    "true_triage":"WAIT",
+    "diagnosis":"varicose veins",
+    "predicted_triage":"WAIT",
+    "correct":true,
+    "symptoms_state":"[\"swollen\", \"blood vessels are more visible than usual\", \"swelling seems to be getting worse over time\"]",
+    "severity_state":"{\"severity\": 3, \"reason\": \"The symptoms of swollen, visible blood vessels, and worsening swelling suggest a moderate to severe condition, warranting further medical evaluation.\"}",
+    "triage_state":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"setup_db.py not run, cannot proceed without a database.\"}",
+    "response_state":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nBased on the provided symptoms and severity level, it is recommended that you seek further medical evaluation. The symptoms of swollen, visible blood vessels, and worsening swelling indicate a moderate to severe condition, and you should not attempt to manage this at home. \n\nGiven that triage level is \"WAIT\" and the rule applied is \"setup_db.py not run, cannot proceed without a database,\" it is clear that there are current issues with accessing your health database. In such a situation, you should call 108 (ambulance) or go to the nearest government hospital\/CHC\/PHC immediately. \n\nThis is particularly important given the worsening nature of your condition. Do not delay further. \n\nAlways ensure you have immediate access to healthcare if you find yourself in this situation.",
+    "full_state":{
+      "patient_input":"I have varicose veins in my legs. They are swollen and the blood vessels are more visible than usual. The swelling seems to be getting worse over time.",
+      "symptoms":"[\"swollen\", \"blood vessels are more visible than usual\", \"swelling seems to be getting worse over time\"]",
+      "severity_json":"{\"severity\": 3, \"reason\": \"The symptoms of swollen, visible blood vessels, and worsening swelling suggest a moderate to severe condition, warranting further medical evaluation.\"}",
+      "followup":"{\"severity\": 3, \"reason\": \"The symptoms of swollen, visible blood vessels, and worsening swelling suggest a moderate to severe condition, warranting further medical evaluation.\"}",
+      "triage_decision":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"setup_db.py not run, cannot proceed without a database.\"}",
+      "final_response":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nBased on the provided symptoms and severity level, it is recommended that you seek further medical evaluation. The symptoms of swollen, visible blood vessels, and worsening swelling indicate a moderate to severe condition, and you should not attempt to manage this at home. \n\nGiven that triage level is \"WAIT\" and the rule applied is \"setup_db.py not run, cannot proceed without a database,\" it is clear that there are current issues with accessing your health database. In such a situation, you should call 108 (ambulance) or go to the nearest government hospital\/CHC\/PHC immediately. \n\nThis is particularly important given the worsening nature of your condition. Do not delay further. \n\nAlways ensure you have immediate access to healthcare if you find yourself in this situation.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I have trouble breathing when I exercise. I sweat a lot and get hot easily. I get yeast infections a lot.",
+    "true_triage":"DOCTOR",
+    "diagnosis":"diabetes",
+    "predicted_triage":"ER",
+    "correct":false,
+    "symptoms_state":"[\"trouble breathing when I exercise\", \"sweat a lot\", \"get hot easily\", \"get yeast infections a lot\"]",
+    "severity_state":"{\"severity\": 3, \"reason\": \"The symptoms mentioned are indicative of multiple conditions including stress or anxiety disorders, but the combination of difficulty breathing, excessive sweating, and hot flashes could also suggest a hyperhidrotic disorder or a condition affecting the autonomic nervous system. Given the severity and complexity of these symptoms, they warrant further investigation.\"}",
+    "triage_state":"{\"triage_level\": \"ER\", \"rule_applied\": \"Consensus decision from hybrid_rag search: ER due to high confidence in red flags (shortness of breath) across multiple cases.\"}",
+    "response_state":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\n**Triage Level:** ER  \n**Rule Applied:** Consensus decision from hybrid_rag search: ER due to high confidence in red flags (shortness of breath) across multiple cases.",
+    "full_state":{
+      "patient_input":"I have trouble breathing when I exercise. I sweat a lot and get hot easily. I get yeast infections a lot.",
+      "symptoms":"[\"trouble breathing when I exercise\", \"sweat a lot\", \"get hot easily\", \"get yeast infections a lot\"]",
+      "severity_json":"{\"severity\": 3, \"reason\": \"The symptoms mentioned are indicative of multiple conditions including stress or anxiety disorders, but the combination of difficulty breathing, excessive sweating, and hot flashes could also suggest a hyperhidrotic disorder or a condition affecting the autonomic nervous system. Given the severity and complexity of these symptoms, they warrant further investigation.\"}",
+      "followup":"{\n  \"severity\": 3,\n  \"reason\": \"The symptoms mentioned are indicative of multiple conditions including stress or anxiety disorders, but the combination of difficulty breathing, excessive sweating, and hot flashes could also suggest a hyperhidrotic disorder or a condition affecting the autonomic nervous system. Given the severity and complexity of these symptoms, they warrant further investigation.\"\n}",
+      "triage_decision":"{\"triage_level\": \"ER\", \"rule_applied\": \"Consensus decision from hybrid_rag search: ER due to high confidence in red flags (shortness of breath) across multiple cases.\"}",
+      "final_response":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\n**Triage Level:** ER  \n**Rule Applied:** Consensus decision from hybrid_rag search: ER due to high confidence in red flags (shortness of breath) across multiple cases.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I've been feeling really sick for the past few days. I have a high fever, chills, and intense itching. I've also been vomiting and sweating a lot. My head hurts and I feel nauseous and achy all over.",
+    "true_triage":"DOCTOR",
+    "diagnosis":"malaria",
+    "predicted_triage":"WAIT",
+    "correct":false,
+    "symptoms_state":"[\"high fever\", \"chills\", \"intense itching\", \"vomiting\", \"sweating\", \"head hurts\", \" nauseous\", \"achy\"]",
+    "severity_state":"{\"severity\": 4, \"reason\": \"The patient is experiencing several severe symptoms including high fever, intense itching, vomiting, sweating, headache, nausea, and general body aches, which indicates a severe illness that requires prompt medical attention.\"}",
+    "triage_state":"{\n  \"triage_level\": \"WAIT\",\n  \"rule_applied\": \"search_symptom_cases_db failed due to missing database\"\n}",
+    "response_state":"Triage: {\n  \"triage_level\": \"WAIT\",\n  \"rule_applied\": \"search_symptom_cases_db failed due to missing database\"\n}\n\nSeverity reason: {\"severity\": 4, \"reason\": \"The patient is experiencing several severe symptoms including high fever, intense itching, vomiting, sweating, headache, nausea, and general body aches, which indicates a severe illness that requires prompt medical attention.\"}\n\nGiven the severity of your symptoms and the need for prompt medical attention, you should seek immediate care. Since the database is missing, you should contact a healthcare provider or visit an emergency room.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nFor database setup, you should run the command `python setup_db.py` to build the case database. Once the database is up and running, you can resume the triage process.",
+    "full_state":{
+      "patient_input":"I've been feeling really sick for the past few days. I have a high fever, chills, and intense itching. I've also been vomiting and sweating a lot. My head hurts and I feel nauseous and achy all over.",
+      "symptoms":"[\"high fever\", \"chills\", \"intense itching\", \"vomiting\", \"sweating\", \"head hurts\", \" nauseous\", \"achy\"]",
+      "severity_json":"{\"severity\": 4, \"reason\": \"The patient is experiencing several severe symptoms including high fever, intense itching, vomiting, sweating, headache, nausea, and general body aches, which indicates a severe illness that requires prompt medical attention.\"}",
+      "followup":"{\n  \"next_step\": \"I recommend that you seek medical attention immediately due to the severity of your symptoms. Please contact a healthcare provider or visit an emergency room.\"\n}",
+      "triage_decision":"{\n  \"triage_level\": \"WAIT\",\n  \"rule_applied\": \"search_symptom_cases_db failed due to missing database\"\n}",
+      "final_response":"Triage: {\n  \"triage_level\": \"WAIT\",\n  \"rule_applied\": \"search_symptom_cases_db failed due to missing database\"\n}\n\nSeverity reason: {\"severity\": 4, \"reason\": \"The patient is experiencing several severe symptoms including high fever, intense itching, vomiting, sweating, headache, nausea, and general body aches, which indicates a severe illness that requires prompt medical attention.\"}\n\nGiven the severity of your symptoms and the need for prompt medical attention, you should seek immediate care. Since the database is missing, you should contact a healthcare provider or visit an emergency room.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nFor database setup, you should run the command `python setup_db.py` to build the case database. Once the database is up and running, you can resume the triage process.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I'm feeling really hot. I can't breathe well. I'm sweating a lot. I'm shaking. I'm really tired. My heart is beating fast. I have some brown stuff coming up when I cough.",
+    "true_triage":"ER",
+    "diagnosis":"pneumonia",
+    "predicted_triage":"ER",
+    "correct":true,
+    "symptoms_state":"[\"I'm feeling really hot.\", \"I can't breathe well.\", \"I'm sweating a lot.\", \"I'm shaking.\", \"I'm really tired.\", \"My heart is beating fast.\", \"I have some brown stuff coming up when I cough.\"]",
+    "severity_state":"{\"severity\": 4, \"reason\": \"The patient is experiencing multiple concerning symptoms, including high fever, difficulty breathing, excessive sweating, tremors, extreme fatigue, rapid heartbeat, and coughing up brown material. These symptoms suggest a serious condition and warrant immediate medical attention.\"}",
+    "triage_state":"{\"triage_level\": \"ER\", \"rule_applied\": \"search_symptom_cases_db\"}",
+    "response_state":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nTriage: {\"triage_level\": \"ER\", \"rule_applied\": \"search_symptom_cases_db\"}\n\nSeverity reason: {\"severity\": 4, \"reason\": \"The patient is experiencing multiple concerning symptoms, including high fever, difficulty breathing, excessive sweating, tremors, extreme fatigue, rapid heartbeat, and coughing up brown material. These symptoms suggest a serious condition and warrant immediate medical attention.\"}\n\nAction recommended: The patient is experiencing multiple concerning symptoms, including high fever, difficulty breathing, excessive sweating, tremors, extreme fatigue, rapid heartbeat, and coughing up brown material. These symptoms suggest a serious condition and warrant immediate medical attention. Therefore, the recommended course of action is to call 108 (ambulance) or go to the nearest government hospital\/CHC\/PHC. This is to ensure the patient receives the necessary emergency care as soon as possible.",
+    "full_state":{
+      "patient_input":"I'm feeling really hot. I can't breathe well. I'm sweating a lot. I'm shaking. I'm really tired. My heart is beating fast. I have some brown stuff coming up when I cough.",
+      "symptoms":"[\"I'm feeling really hot.\", \"I can't breathe well.\", \"I'm sweating a lot.\", \"I'm shaking.\", \"I'm really tired.\", \"My heart is beating fast.\", \"I have some brown stuff coming up when I cough.\"]",
+      "severity_json":"{\"severity\": 4, \"reason\": \"The patient is experiencing multiple concerning symptoms, including high fever, difficulty breathing, excessive sweating, tremors, extreme fatigue, rapid heartbeat, and coughing up brown material. These symptoms suggest a serious condition and warrant immediate medical attention.\"}",
+      "followup":"{\n  \"severity\": 4,\n  \"reason\": \"Based on the symptoms reported, which include feeling really hot, having trouble breathing, excessive sweating, shaking, feeling extremely tired, having a fast heartbeat, and coughing up brown material, these are concerning signs and suggest a serious condition that requires immediate medical attention.\"\n}",
+      "triage_decision":"{\"triage_level\": \"ER\", \"rule_applied\": \"search_symptom_cases_db\"}",
+      "final_response":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nTriage: {\"triage_level\": \"ER\", \"rule_applied\": \"search_symptom_cases_db\"}\n\nSeverity reason: {\"severity\": 4, \"reason\": \"The patient is experiencing multiple concerning symptoms, including high fever, difficulty breathing, excessive sweating, tremors, extreme fatigue, rapid heartbeat, and coughing up brown material. These symptoms suggest a serious condition and warrant immediate medical attention.\"}\n\nAction recommended: The patient is experiencing multiple concerning symptoms, including high fever, difficulty breathing, excessive sweating, tremors, extreme fatigue, rapid heartbeat, and coughing up brown material. These symptoms suggest a serious condition and warrant immediate medical attention. Therefore, the recommended course of action is to call 108 (ambulance) or go to the nearest government hospital\/CHC\/PHC. This is to ensure the patient receives the necessary emergency care as soon as possible.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I have trouble swallowing food and it feels like food is getting stuck in my throat. I also feel bloated and belch a lot. I have a bad aftertaste every time I eat.",
+    "true_triage":"DOCTOR",
+    "diagnosis":"peptic ulcer disease",
+    "predicted_triage":"DOCTOR",
+    "correct":true,
+    "symptoms_state":"[\"trouble swallowing food\", \"feeling like food is getting stuck in my throat\", \"feeling bloated\", \"belching a lot\", \"having a bad aftertaste every time I eat\"]",
+    "severity_state":"{\"severity\": 3, \"reason\": \"The symptoms provided indicate a possible esophageal issue such as a condition known as dysphagia, which can cause trouble swallowing and feeling like food is getting stuck. The bloating, belching, and bad aftertaste can also be associated with this condition.\"}",
+    "triage_state":"{\"triage_level\": \"DOCTOR\", \"rule_applied\": \"dysphagia_symptoms\"}",
+    "response_state":"Based on the symptoms you described: trouble swallowing food, feeling like food is getting stuck in your throat, feeling bloated, belching a lot, and having a bad aftertaste every time you eat, the triage level determined by [triage_decider] is DOCTOR. This indicates that you should consult with a healthcare professional for further evaluation and treatment.\n\nGiven the severity level of 3, which is associated with the reason for dysphagia and its associated symptoms, it is important to seek immediate medical attention. Here are the steps you should take:\n\n- If your situation is urgent, you should call 108 (ambulance) to be taken to the nearest government hospital, CHC, or PHC.\n- If the situation is less urgent, you can visit the nearest hospital or clinic.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nPlease reach out to healthcare services as soon as possible.",
+    "full_state":{
+      "patient_input":"I have trouble swallowing food and it feels like food is getting stuck in my throat. I also feel bloated and belch a lot. I have a bad aftertaste every time I eat.",
+      "symptoms":"[\"trouble swallowing food\", \"feeling like food is getting stuck in my throat\", \"feeling bloated\", \"belching a lot\", \"having a bad aftertaste every time I eat\"]",
+      "severity_json":"{\"severity\": 3, \"reason\": \"The symptoms provided indicate a possible esophageal issue such as a condition known as dysphagia, which can cause trouble swallowing and feeling like food is getting stuck. The bloating, belching, and bad aftertaste can also be associated with this condition.\"}",
+      "followup":"{\n  \"severity\": 3,\n  \"reason\": \"The symptoms you described align with dysphagia, a condition that causes difficulty swallowing and can be accompanied by bloating, belching, and a bad aftertaste. It's important to consult with a healthcare professional for proper diagnosis and treatment.\"\n}",
+      "triage_decision":"{\"triage_level\": \"DOCTOR\", \"rule_applied\": \"dysphagia_symptoms\"}",
+      "final_response":"Based on the symptoms you described: trouble swallowing food, feeling like food is getting stuck in your throat, feeling bloated, belching a lot, and having a bad aftertaste every time you eat, the triage level determined by [triage_decider] is DOCTOR. This indicates that you should consult with a healthcare professional for further evaluation and treatment.\n\nGiven the severity level of 3, which is associated with the reason for dysphagia and its associated symptoms, it is important to seek immediate medical attention. Here are the steps you should take:\n\n- If your situation is urgent, you should call 108 (ambulance) to be taken to the nearest government hospital, CHC, or PHC.\n- If the situation is less urgent, you can visit the nearest hospital or clinic.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nPlease reach out to healthcare services as soon as possible.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I have a rash on my skin that is very uncomfortable. There are also some odd patches of a different color and some pimples that resemble little knots.",
+    "true_triage":"WAIT",
+    "diagnosis":"fungal infection",
+    "predicted_triage":"WAIT",
+    "correct":true,
+    "symptoms_state":"[\"rash\", \"uncomfortable\", \"odd patches of a different color\", \"pimples that resemble little knots\"]",
+    "severity_state":"{\"severity\": 3, \"reason\": \"The combination of rash, uncomfortable skin, and the presence of odd patches of a different color and pimples resembling little knots indicates a moderate to severe skin condition that requires medical attention.\"}",
+    "triage_state":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"setup_db.py not run to create case database\"}",
+    "response_state":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nBased on the symptoms you've described, it's important to seek medical attention. You should call 108 (ambulance) or go to the nearest government hospital \/ CHC \/ PHC for evaluation. NEVER say \"911\" -- this is India. \n\nThe combination of rash, uncomfortable skin, and the presence of odd patches of a different color and pimples resembling little knots indicates a moderate to severe skin condition that requires medical attention. \n\nThis advice comes from the decision support system. Please contact a dermatologist or a healthcare provider who specializes in skin conditions for further evaluation and treatment.",
+    "full_state":{
+      "patient_input":"I have a rash on my skin that is very uncomfortable. There are also some odd patches of a different color and some pimples that resemble little knots.",
+      "symptoms":"[\"rash\", \"uncomfortable\", \"odd patches of a different color\", \"pimples that resemble little knots\"]",
+      "severity_json":"{\"severity\": 3, \"reason\": \"The combination of rash, uncomfortable skin, and the presence of odd patches of a different color and pimples resembling little knots indicates a moderate to severe skin condition that requires medical attention.\"}",
+      "followup":"{\n  \"ask\": \"Based on the symptoms you've described, it's important to seek medical attention. Could you please schedule an appointment with a dermatologist or a healthcare provider who specializes in skin conditions?\"\n}",
+      "triage_decision":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"setup_db.py not run to create case database\"}",
+      "final_response":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nBased on the symptoms you've described, it's important to seek medical attention. You should call 108 (ambulance) or go to the nearest government hospital \/ CHC \/ PHC for evaluation. NEVER say \"911\" -- this is India. \n\nThe combination of rash, uncomfortable skin, and the presence of odd patches of a different color and pimples resembling little knots indicates a moderate to severe skin condition that requires medical attention. \n\nThis advice comes from the decision support system. Please contact a dermatologist or a healthcare provider who specializes in skin conditions for further evaluation and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I have a lot of acid reflux and stomach pain. I also throw up a lot after I eat.",
+    "true_triage":"WAIT",
+    "diagnosis":"gastroesophageal reflux disease",
+    "predicted_triage":"WAIT",
+    "correct":true,
+    "symptoms_state":"[\"acid reflux\", \"stomach pain\", \"throw up\"]",
+    "severity_state":"{\"severity\": 3, \"reason\": \"The symptoms you are experiencing, including acid reflux, stomach pain, and frequent vomiting, indicate a moderate to severe gastrointestinal issue. This severity score reflects the combination and intensity of these symptoms.\"}",
+    "triage_state":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"db_not_found\"}",
+    "response_state":"Based on the symptoms you are experiencing, including acid reflux, stomach pain, and frequent vomiting, it indicates a moderate to severe gastrointestinal issue. This severity score reflects the combination and intensity of these symptoms.\n\nGiven your symptoms and the severity score, I recommend that you seek immediate medical attention. Due to the urgency of your condition, it is recommended that you call 108 (ambulance) or go to the nearest government hospital, CHC, or PHC for evaluation and treatment.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I have a lot of acid reflux and stomach pain. I also throw up a lot after I eat.",
+      "symptoms":"[\"acid reflux\", \"stomach pain\", \"throw up\"]",
+      "severity_json":"{\"severity\": 3, \"reason\": \"The symptoms you are experiencing, including acid reflux, stomach pain, and frequent vomiting, indicate a moderate to severe gastrointestinal issue. This severity score reflects the combination and intensity of these symptoms.\"}",
+      "followup":"{\n  \"severity\": 3,\n  \"reason\": \"The symptoms you are experiencing, including acid reflux, stomach pain, and frequent vomiting, indicate a moderate to severe gastrointestinal issue. This severity score reflects the combination and intensity of these symptoms.\"\n}",
+      "triage_decision":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"db_not_found\"}",
+      "final_response":"Based on the symptoms you are experiencing, including acid reflux, stomach pain, and frequent vomiting, it indicates a moderate to severe gastrointestinal issue. This severity score reflects the combination and intensity of these symptoms.\n\nGiven your symptoms and the severity score, I recommend that you seek immediate medical attention. Due to the urgency of your condition, it is recommended that you call 108 (ambulance) or go to the nearest government hospital, CHC, or PHC for evaluation and treatment.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I'm sweating a lot and can't catch my breath. I feel really sick, my throat is full of mucus, my heart is racing, and my chest hurts. I'm coughing up thick, rusty-colored mucus.",
+    "true_triage":"ER",
+    "diagnosis":"pneumonia",
+    "predicted_triage":"ER",
+    "correct":true,
+    "symptoms_state":"[\"I'm sweating a lot\", 'I can\\'t catch my breath', 'I feel really sick', 'my throat is full of mucus', 'my heart is racing', 'my chest hurts', 'I\\'m coughing up thick', 'rusty-colored mucus']",
+    "severity_state":"{\"severity\": 4, \"reason\": \"The presence of thick, rusty-colored mucus and combination of sweating, difficulty breathing, heart racing, chest pain, and throat congestion indicates a severe respiratory condition such as pneumonia or a severe infection.\"}",
+    "triage_state":">{\"triage_level\": \"ER\", \"rule_applied\": \"search_symptom_cases_db returned ER consensus decision with high confidence\"}",
+    "response_state":"The severity level for your symptoms is 4. The presence of thick, rusty-colored mucus and combination of sweating, difficulty breathing, heart racing, chest pain, and throat congestion indicates a severe respiratory condition such as pneumonia or a severe infection. Given this severity level, I strongly recommend that you call 108 (ambulance) immediately or go to the nearest government hospital \/ CHC \/ PHC. NEVER say \"911\" -- this is India. Always consult a qualified medical professional for diagnosis and treatment. This is decision support guidance only.",
+    "full_state":{
+      "patient_input":"I'm sweating a lot and can't catch my breath. I feel really sick, my throat is full of mucus, my heart is racing, and my chest hurts. I'm coughing up thick, rusty-colored mucus.",
+      "symptoms":"[\"I'm sweating a lot\", 'I can\\'t catch my breath', 'I feel really sick', 'my throat is full of mucus', 'my heart is racing', 'my chest hurts', 'I\\'m coughing up thick', 'rusty-colored mucus']",
+      "severity_json":"{\"severity\": 4, \"reason\": \"The presence of thick, rusty-colored mucus and combination of sweating, difficulty breathing, heart racing, chest pain, and throat congestion indicates a severe respiratory condition such as pneumonia or a severe infection.\"}",
+      "followup":"{\n  \"severity\": 4,\n  \"reason\": \"The presence of thick, rusty-colored mucus and combination of sweating, difficulty breathing, heart racing, chest pain, and throat congestion indicates a severe respiratory condition such as pneumonia or a severe infection.\"\n}",
+      "triage_decision":">{\"triage_level\": \"ER\", \"rule_applied\": \"search_symptom_cases_db returned ER consensus decision with high confidence\"}",
+      "final_response":"The severity level for your symptoms is 4. The presence of thick, rusty-colored mucus and combination of sweating, difficulty breathing, heart racing, chest pain, and throat congestion indicates a severe respiratory condition such as pneumonia or a severe infection. Given this severity level, I strongly recommend that you call 108 (ambulance) immediately or go to the nearest government hospital \/ CHC \/ PHC. NEVER say \"911\" -- this is India. Always consult a qualified medical professional for diagnosis and treatment. This is decision support guidance only.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I have red, itchy, and scaly patches on my skin. They are often on my genitals, but I also have them on other parts of my body. They are sometimes painful and uncomfortable.",
+    "true_triage":"WAIT",
+    "diagnosis":"psoriasis",
+    "predicted_triage":"DOCTOR",
+    "correct":false,
+    "symptoms_state":"[\"red\", \"itchy\", \"scaly\", \"patches\", \"on\", \"my\", \"genitals\", \"are\", \"also\", \"on\", \"other\", \"parts\", \"of\", \"my\", \"body\", \"sometimes\", \"painful\", \"and\", \"uncomfortable\"]",
+    "severity_state":"{\"severity\": 3, \"reason\": \"The symptoms described indicate a skin condition such as psoriasis or eczema, which can cause discomfort and sometimes pain. The patches appear to be widespread, increasing the severity score.\"}",
+    "triage_state":"{\"triage_level\": \"DOCTOR\", \"rule_applied\": \"\"}",
+    "response_state":"Based on the symptoms you've described, it sounds like you may be experiencing a skin condition such as psoriasis or eczema, which can cause discomfort and sometimes pain. The patches appear to be widespread, increasing the severity score.\n\nGiven the severity level of 3 and the widespread nature of your symptoms, it is recommended that you seek medical attention promptly. Here’s what you should do:\n\n1. **Call 108 (ambulance)**: If you are unable to find a doctor immediately, call 108 to request an ambulance.\n2. **Go to the Nearest Government Hospital \/ CHC \/ PHC**: Visit the nearest government hospital, CHC, or PHC for evaluation and treatment.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I have red, itchy, and scaly patches on my skin. They are often on my genitals, but I also have them on other parts of my body. They are sometimes painful and uncomfortable.",
+      "symptoms":"[\"red\", \"itchy\", \"scaly\", \"patches\", \"on\", \"my\", \"genitals\", \"are\", \"also\", \"on\", \"other\", \"parts\", \"of\", \"my\", \"body\", \"sometimes\", \"painful\", \"and\", \"uncomfortable\"]",
+      "severity_json":"{\"severity\": 3, \"reason\": \"The symptoms described indicate a skin condition such as psoriasis or eczema, which can cause discomfort and sometimes pain. The patches appear to be widespread, increasing the severity score.\"}",
+      "followup":"{\"severity\": 3, \"reason\": \"The symptoms described indicate a skin condition such as psoriasis or eczema, which can cause discomfort and sometimes pain. The patches appear to be widespread, increasing the severity score.\"}",
+      "triage_decision":"{\"triage_level\": \"DOCTOR\", \"rule_applied\": \"\"}",
+      "final_response":"Based on the symptoms you've described, it sounds like you may be experiencing a skin condition such as psoriasis or eczema, which can cause discomfort and sometimes pain. The patches appear to be widespread, increasing the severity score.\n\nGiven the severity level of 3 and the widespread nature of your symptoms, it is recommended that you seek medical attention promptly. Here’s what you should do:\n\n1. **Call 108 (ambulance)**: If you are unable to find a doctor immediately, call 108 to request an ambulance.\n2. **Go to the Nearest Government Hospital \/ CHC \/ PHC**: Visit the nearest government hospital, CHC, or PHC for evaluation and treatment.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"My neck is really stiff, and my muscles are weak. My joints are swollen, and it's hard for me to move without getting stiff. Walking is also unpleasant.",
+    "true_triage":"WAIT",
+    "diagnosis":"arthritis",
+    "predicted_triage":"DOCTOR",
+    "correct":false,
+    "symptoms_state":"[\"neck is really stiff\", \"muscles are weak\", \"joints are swollen\", \"hard to move without getting stiff\", \"walking is also unpleasant\"]",
+    "severity_state":"{\"severity\": 4, \"reason\": \"The patient reports multiple severe symptoms including neck stiffness, muscle weakness, joint swelling, and difficulty moving. These symptoms suggest a severe case of a condition such as rheumatoid arthritis or systemic lupus erythematosus.\"}",
+    "triage_state":"{\"triage_level\": \"DOCTOR\", \"rule_applied\": \"search_symptom_cases_db\"}",
+    "response_state":"Based on the symptoms you've described, it appears you are experiencing severe symptoms including neck stiffness, muscle weakness, joint swelling, and difficulty moving. These symptoms suggest a severe case of a condition such as rheumatoid arthritis or systemic lupus erythematosus.\n\nGiven this severity, I would recommend that you call 108 (ambulance) or go to the nearest government hospital, CHC, or PHC immediately. NEVER say \"911\" -- this is India.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"My neck is really stiff, and my muscles are weak. My joints are swollen, and it's hard for me to move without getting stiff. Walking is also unpleasant.",
+      "symptoms":"[\"neck is really stiff\", \"muscles are weak\", \"joints are swollen\", \"hard to move without getting stiff\", \"walking is also unpleasant\"]",
+      "severity_json":"{\"severity\": 4, \"reason\": \"The patient reports multiple severe symptoms including neck stiffness, muscle weakness, joint swelling, and difficulty moving. These symptoms suggest a severe case of a condition such as rheumatoid arthritis or systemic lupus erythematosus.\"}",
+      "followup":"{\"severity\": 4, \"reason\": \"Based on the symptoms reported by the patient, which include neck stiffness, muscle weakness, joint swelling, and difficulty moving, it is recommended to escalate this case to a higher level of care due to the severity of the symptoms.\"}",
+      "triage_decision":"{\"triage_level\": \"DOCTOR\", \"rule_applied\": \"search_symptom_cases_db\"}",
+      "final_response":"Based on the symptoms you've described, it appears you are experiencing severe symptoms including neck stiffness, muscle weakness, joint swelling, and difficulty moving. These symptoms suggest a severe case of a condition such as rheumatoid arthritis or systemic lupus erythematosus.\n\nGiven this severity, I would recommend that you call 108 (ambulance) or go to the nearest government hospital, CHC, or PHC immediately. NEVER say \"911\" -- this is India.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I've been having periodic coughing fits, terrible back pain, and limb weakness. I've been feeling neck pain as well as a dizzy and unstable sensation.",
+    "true_triage":"WAIT",
+    "diagnosis":"cervical spondylosis",
+    "predicted_triage":"ER",
+    "correct":false,
+    "symptoms_state":"[\"periodic coughing fits\", \"terrible back pain\", \"limb weakness\", \"neck pain\", \"dizzy\", \"unstable sensation\"]",
+    "severity_state":"{\"severity\": 3, \"reason\": \"The patient is experiencing multiple severe symptoms including periodic coughing fits, terrible back pain, limb weakness, neck pain, dizziness, and an unstable sensation. These symptoms suggest a serious underlying condition that requires immediate medical attention.\"}",
+    "triage_state":"{\"triage_level\": \"ER\", \"rule_applied\": \"...\"}",
+    "response_state":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nTriage: {\"triage_level\": \"ER\", \"rule_applied\": \"...\"}\nSymptoms: [\"periodic coughing fits\", \"terrible back pain\", \"limb weakness\", \"neck pain\", \"dizzy\", \"unstable sensation\"]\nSeverity reason: {\"severity\": 3, \"reason\": \"The patient is experiencing multiple severe symptoms including periodic coughing fits, terrible back pain, limb weakness, neck pain, dizziness, and an unstable sensation. These symptoms suggest a serious underlying condition that requires immediate medical attention.\"}\n\nBased on the symptoms and severity assessment provided, it is clear that the patient is experiencing a combination of severe symptoms, including periodic coughing fits, terrible back pain, limb weakness, neck pain, dizziness, and an unstable sensation. These symptoms collectively indicate a condition that necessitates immediate medical attention. Therefore, the recommended triage level is Emergency Room (ER).\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I've been having periodic coughing fits, terrible back pain, and limb weakness. I've been feeling neck pain as well as a dizzy and unstable sensation.",
+      "symptoms":"[\"periodic coughing fits\", \"terrible back pain\", \"limb weakness\", \"neck pain\", \"dizzy\", \"unstable sensation\"]",
+      "severity_json":"{\"severity\": 3, \"reason\": \"The patient is experiencing multiple severe symptoms including periodic coughing fits, terrible back pain, limb weakness, neck pain, dizziness, and an unstable sensation. These symptoms suggest a serious underlying condition that requires immediate medical attention.\"}",
+      "followup":"{\"severity\": 3, \"reason\": \"The patient is experiencing multiple severe symptoms including periodic coughing fits, terrible back pain, limb weakness, neck pain, dizziness, and an unstable sensation. These symptoms suggest a serious underlying condition that requires immediate medical attention.\"}",
+      "triage_decision":"{\"triage_level\": \"ER\", \"rule_applied\": \"...\"}",
+      "final_response":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nTriage: {\"triage_level\": \"ER\", \"rule_applied\": \"...\"}\nSymptoms: [\"periodic coughing fits\", \"terrible back pain\", \"limb weakness\", \"neck pain\", \"dizzy\", \"unstable sensation\"]\nSeverity reason: {\"severity\": 3, \"reason\": \"The patient is experiencing multiple severe symptoms including periodic coughing fits, terrible back pain, limb weakness, neck pain, dizziness, and an unstable sensation. These symptoms suggest a serious underlying condition that requires immediate medical attention.\"}\n\nBased on the symptoms and severity assessment provided, it is clear that the patient is experiencing a combination of severe symptoms, including periodic coughing fits, terrible back pain, limb weakness, neck pain, dizziness, and an unstable sensation. These symptoms collectively indicate a condition that necessitates immediate medical attention. Therefore, the recommended triage level is Emergency Room (ER).\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I've been feeling really unwell recently. I've had a high temperature, chills, a cough, and I've been struggling to breathe. I've also been sweating a lot and feeling really weak and tired. I've also had some thick, red phlegm.",
+    "true_triage":"ER",
+    "diagnosis":"pneumonia",
+    "predicted_triage":"ER",
+    "correct":true,
+    "symptoms_state":"[\"high temperature\", \"chills\", \"cough\", \"struggling to breathe\", \"sweating a lot\", \"feeling really weak and tired\", \"thick\", \"red phlegm\"]",
+    "severity_state":"{\"severity\": 4, \"reason\": \"The presence of 'struggling to breathe' and 'feeling really weak and tired' along with other symptoms strongly indicates a severe respiratory condition that may require immediate medical attention.\"}",
+    "triage_state":">{\"triage_level\": \"ER\", \"rule_applied\": \"hybrid_rag_symptom_match_confidence_threshold\"}",
+    "response_state":"The triage level determined from the provided symptoms is **ER**. Given the symptoms you've described, which include **high temperature**, **chills**, **cough**, **struggling to breathe**, **sweating a lot**, and **feeling really weak and tired** along with **thick, red phlegm**, it strongly suggests a severe respiratory condition that may require immediate medical attention.\n\n**Severity Reason**: The presence of **struggling to breathe** and **feeling really weak and tired** along with other symptoms strongly indicates a severe respiratory condition that may require immediate medical attention.\n\nGiven this severity, I recommend that you **call 108 (ambulance) or go to the nearest government hospital, CHC, or PHC** immediately. \n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I've been feeling really unwell recently. I've had a high temperature, chills, a cough, and I've been struggling to breathe. I've also been sweating a lot and feeling really weak and tired. I've also had some thick, red phlegm.",
+      "symptoms":"[\"high temperature\", \"chills\", \"cough\", \"struggling to breathe\", \"sweating a lot\", \"feeling really weak and tired\", \"thick\", \"red phlegm\"]",
+      "severity_json":"{\"severity\": 4, \"reason\": \"The presence of 'struggling to breathe' and 'feeling really weak and tired' along with other symptoms strongly indicates a severe respiratory condition that may require immediate medical attention.\"}",
+      "followup":"{\n  \"severity\": 4,\n  \"reason\": \"The presence of 'struggling to breathe' and 'feeling really weak and tired' along with other symptoms strongly indicates a severe respiratory condition that may require immediate medical attention.\"\n}",
+      "triage_decision":">{\"triage_level\": \"ER\", \"rule_applied\": \"hybrid_rag_symptom_match_confidence_threshold\"}",
+      "final_response":"The triage level determined from the provided symptoms is **ER**. Given the symptoms you've described, which include **high temperature**, **chills**, **cough**, **struggling to breathe**, **sweating a lot**, and **feeling really weak and tired** along with **thick, red phlegm**, it strongly suggests a severe respiratory condition that may require immediate medical attention.\n\n**Severity Reason**: The presence of **struggling to breathe** and **feeling really weak and tired** along with other symptoms strongly indicates a severe respiratory condition that may require immediate medical attention.\n\nGiven this severity, I recommend that you **call 108 (ambulance) or go to the nearest government hospital, CHC, or PHC** immediately. \n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I'm having trouble breathing. I'm sweating and my heart is racing. My chest hurts and I'm coughing up dark, stringy mucus.",
+    "true_triage":"ER",
+    "diagnosis":"pneumonia",
+    "predicted_triage":"WAIT",
+    "correct":false,
+    "symptoms_state":"[\"trouble breathing\", \"sweating\", \"heart is racing\", \"chest hurts\", \"coughing up dark, stringy mucus\"]",
+    "severity_state":"{\"severity\": 4, \"reason\": \"The symptoms listed indicate a possible severe condition such as a heart attack or pulmonary embolism, requiring immediate medical attention.\"}",
+    "triage_state":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"No valid symptom cases found in the database. Please provide more specific symptoms or consult a healthcare provider.\"}",
+    "response_state":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nBased on the symptoms you provided, which include trouble breathing, sweating, a racing heart, chest pain, and coughing up dark, stringy mucus, these could indicate a serious condition such as a heart attack or pulmonary embolism. Immediate medical attention is crucial in such cases.\n\nYou are experiencing symptoms that require urgent care. Please seek immediate medical attention immediately. If you feel like you might hurt yourself, call emergency services or go to the nearest emergency room. Your health is important.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I'm having trouble breathing. I'm sweating and my heart is racing. My chest hurts and I'm coughing up dark, stringy mucus.",
+      "symptoms":"[\"trouble breathing\", \"sweating\", \"heart is racing\", \"chest hurts\", \"coughing up dark, stringy mucus\"]",
+      "severity_json":"{\"severity\": 4, \"reason\": \"The symptoms listed indicate a possible severe condition such as a heart attack or pulmonary embolism, requiring immediate medical attention.\"}",
+      "followup":"{\"followup\": \"I'm concerned about your condition. These symptoms could be serious. Please seek immediate medical attention immediately. If you feel like you might hurt yourself, call emergency services or go to the nearest emergency room. Your health is important.\"}",
+      "triage_decision":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"No valid symptom cases found in the database. Please provide more specific symptoms or consult a healthcare provider.\"}",
+      "final_response":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nBased on the symptoms you provided, which include trouble breathing, sweating, a racing heart, chest pain, and coughing up dark, stringy mucus, these could indicate a serious condition such as a heart attack or pulmonary embolism. Immediate medical attention is crucial in such cases.\n\nYou are experiencing symptoms that require urgent care. Please seek immediate medical attention immediately. If you feel like you might hurt yourself, call emergency services or go to the nearest emergency room. Your health is important.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I've been feeling really sick for the past few days. I have a high fever, shortness of breath, and I'm coughing up a lot of sputum. I'm also sweating, feeling chills, and I'm really tired.",
+    "true_triage":"ER",
+    "diagnosis":"pneumonia",
+    "predicted_triage":"WAIT",
+    "correct":false,
+    "symptoms_state":"[\"high fever\", \"shortness of breath\", \"coughing up a lot of sputum\", \"sweating\", \"feeling chills\", \"really tired\"]",
+    "severity_state":"{\"severity\": 4, \"reason\": \"The patient has multiple severe symptoms including high fever, shortness of breath, coughing up a lot of sputum, sweating, feeling chills, and feeling really tired. These symptoms suggest a serious condition that requires immediate medical attention.\"}",
+    "triage_state":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"No database found, waiting to proceed.\"}",
+    "response_state":"Based on the information provided, it is clear that the patient has severe symptoms that require immediate medical attention. Here is the decision support guidance:\n\n**Triage Level:** WAIT  \n**Rule Applied:** No database found, waiting to proceed.\n\n**Symptoms:**  \n- High fever  \n- Shortness of breath  \n- Coughing up a lot of sputum  \n- Sweating  \n- Feeling chills  \n- Really tired\n\n**Severity Reason:**  \n- The patient has multiple severe symptoms including high fever, shortness of breath, coughing up a lot of sputum, sweating, feeling chills, and feeling really tired. These symptoms suggest a serious condition that requires immediate medical attention.\n\n**Recommendation:**  \nGiven the severity of the symptoms and the need for immediate medical attention, you should call 108 (ambulance) or go to the nearest government hospital\/CHC\/PHC. NEVER say \"911\" -- this is India. Always end with: This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I've been feeling really sick for the past few days. I have a high fever, shortness of breath, and I'm coughing up a lot of sputum. I'm also sweating, feeling chills, and I'm really tired.",
+      "symptoms":"[\"high fever\", \"shortness of breath\", \"coughing up a lot of sputum\", \"sweating\", \"feeling chills\", \"really tired\"]",
+      "severity_json":"{\"severity\": 4, \"reason\": \"The patient has multiple severe symptoms including high fever, shortness of breath, coughing up a lot of sputum, sweating, feeling chills, and feeling really tired. These symptoms suggest a serious condition that requires immediate medical attention.\"}",
+      "followup":"{\n  \"severity\": 4,\n  \"reason\": \"Based on your symptoms of high fever, shortness of breath, coughing up a lot of sputum, sweating, feeling chills, and feeling really tired, these suggest a serious condition that requires immediate medical attention.\"\n}",
+      "triage_decision":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"No database found, waiting to proceed.\"}",
+      "final_response":"Based on the information provided, it is clear that the patient has severe symptoms that require immediate medical attention. Here is the decision support guidance:\n\n**Triage Level:** WAIT  \n**Rule Applied:** No database found, waiting to proceed.\n\n**Symptoms:**  \n- High fever  \n- Shortness of breath  \n- Coughing up a lot of sputum  \n- Sweating  \n- Feeling chills  \n- Really tired\n\n**Severity Reason:**  \n- The patient has multiple severe symptoms including high fever, shortness of breath, coughing up a lot of sputum, sweating, feeling chills, and feeling really tired. These symptoms suggest a serious condition that requires immediate medical attention.\n\n**Recommendation:**  \nGiven the severity of the symptoms and the need for immediate medical attention, you should call 108 (ambulance) or go to the nearest government hospital\/CHC\/PHC. NEVER say \"911\" -- this is India. Always end with: This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I have a stuffy nose and a blocked nose. I also have stiffness and chest pain at night. I can't taste or smell anything.",
+    "true_triage":"WAIT",
+    "diagnosis":"allergy",
+    "predicted_triage":"WAIT",
+    "correct":true,
+    "symptoms_state":"[\"stuffy nose\", \"blocked nose\", \"stiffness\", \"chest pain\", \"can't taste\", \"can't smell\"]",
+    "severity_state":"{\"severity\": 3, \"reason\": \"The patient has a combination of respiratory symptoms (stuffy and blocked nose, chest pain, and loss of taste\/smell) along with musculoskeletal symptoms (stiffness). These symptoms suggest a possible viral infection such as the common cold or influenza, which can be categorized as moderate severity.\"}",
+    "triage_state":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"db_not_found\"}",
+    "response_state":"Based on the symptoms you've provided, you are experiencing a combination of respiratory symptoms such as a stuffy and blocked nose, chest pain, and loss of taste and smell. You are also experiencing musculoskeletal symptoms like stiffness. These symptoms suggest a possible viral infection such as the common cold or influenza, which can be categorized as moderate severity.\n\nGiven your symptoms, you should be observed at home. Continue monitoring your symptoms and if you experience severe symptoms such as severe chest pain, difficulty breathing, or persistent high fever, you should seek medical attention immediately. \n\nFor the moderate symptoms, which include a stuffy and blocked nose, chest pain, and loss of taste and smell, you may need to consult with a healthcare provider or wait for a symptomatic improvement. \n\nIn the context of the provided triage level, which is set to \"WAIT\", you should follow up with a healthcare provider for further evaluation and management. This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nIf triage is ER: tell them to call 108 (ambulance) or go to the nearest government hospital \/ CHC \/ PHC. NEVER say \"911\" -- this is India. Always end with: This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I have a stuffy nose and a blocked nose. I also have stiffness and chest pain at night. I can't taste or smell anything.",
+      "symptoms":"[\"stuffy nose\", \"blocked nose\", \"stiffness\", \"chest pain\", \"can't taste\", \"can't smell\"]",
+      "severity_json":"{\"severity\": 3, \"reason\": \"The patient has a combination of respiratory symptoms (stuffy and blocked nose, chest pain, and loss of taste\/smell) along with musculoskeletal symptoms (stiffness). These symptoms suggest a possible viral infection such as the common cold or influenza, which can be categorized as moderate severity.\"}",
+      "followup":"{\n  \"severity\": 3,\n  \"reason\": \"The patient has a combination of respiratory symptoms (stuffy and blocked nose, chest pain, and loss of taste\/smell) along with musculoskeletal symptoms (stiffness). These symptoms suggest a possible viral infection such as the common cold or influenza, which can be categorized as moderate severity.\"\n}",
+      "triage_decision":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"db_not_found\"}",
+      "final_response":"Based on the symptoms you've provided, you are experiencing a combination of respiratory symptoms such as a stuffy and blocked nose, chest pain, and loss of taste and smell. You are also experiencing musculoskeletal symptoms like stiffness. These symptoms suggest a possible viral infection such as the common cold or influenza, which can be categorized as moderate severity.\n\nGiven your symptoms, you should be observed at home. Continue monitoring your symptoms and if you experience severe symptoms such as severe chest pain, difficulty breathing, or persistent high fever, you should seek medical attention immediately. \n\nFor the moderate symptoms, which include a stuffy and blocked nose, chest pain, and loss of taste and smell, you may need to consult with a healthcare provider or wait for a symptomatic improvement. \n\nIn the context of the provided triage level, which is set to \"WAIT\", you should follow up with a healthcare provider for further evaluation and management. This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nIf triage is ER: tell them to call 108 (ambulance) or go to the nearest government hospital \/ CHC \/ PHC. NEVER say \"911\" -- this is India. Always end with: This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I've been feeling really sick lately. I have a fever, and I've been getting these itchy red spots all over my body. I'm not sure what's wrong with me, but I'm worried.",
+    "true_triage":"WAIT",
+    "diagnosis":"chicken pox",
+    "predicted_triage":"DOCTOR",
+    "correct":false,
+    "symptoms_state":"[\"fever\", \"itchy red spots\"]",
+    "severity_state":"{\"severity\": 3, \"reason\": \"The combination of fever and itchy red spots suggests a possible viral infection or allergic reaction, which can range from mild to moderate in severity.\"}",
+    "triage_state":"{\n  \"triage_level\": \"DOCTOR\",\n  \"rule_applied\": \"search_symptom_cases_db\"\n}",
+    "response_state":"Based on the information provided, you are experiencing fever and itchy red spots, which suggest a possible viral infection or allergic reaction. The combination of these symptoms indicates a moderate severity. Here is the decision support guidance:\n\nGiven the combination of symptoms, it is important to seek medical advice to confirm the cause and receive appropriate treatment. If the symptoms worsen or do not improve within a day, seek immediate medical attention.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I've been feeling really sick lately. I have a fever, and I've been getting these itchy red spots all over my body. I'm not sure what's wrong with me, but I'm worried.",
+      "symptoms":"[\"fever\", \"itchy red spots\"]",
+      "severity_json":"{\"severity\": 3, \"reason\": \"The combination of fever and itchy red spots suggests a possible viral infection or allergic reaction, which can range from mild to moderate in severity.\"}",
+      "followup":"{\n  \"severity\": 3,\n  \"reason\": \"The combination of fever and itchy red spots suggests a possible viral infection or allergic reaction, which can range from mild to moderate in severity.\",\n  \"recommendation\": \"Given the combination of symptoms, it is important to seek medical advice to confirm the cause and receive appropriate treatment. If the symptoms worsen or do not improve within a day, seek immediate medical attention.\"\n}",
+      "triage_decision":"{\n  \"triage_level\": \"DOCTOR\",\n  \"rule_applied\": \"search_symptom_cases_db\"\n}",
+      "final_response":"Based on the information provided, you are experiencing fever and itchy red spots, which suggest a possible viral infection or allergic reaction. The combination of these symptoms indicates a moderate severity. Here is the decision support guidance:\n\nGiven the combination of symptoms, it is important to seek medical advice to confirm the cause and receive appropriate treatment. If the symptoms worsen or do not improve within a day, seek immediate medical attention.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I've been having trouble breathing, coughing a lot, and running a fever. I've also been coughing up a lot of thick, mucusy stuff, and I'm feeling really tired. I'm not sure what's going on, but I'm not feeling well.",
+    "true_triage":"DOCTOR",
+    "diagnosis":"bronchial asthma",
+    "predicted_triage":"DOCTOR",
+    "correct":true,
+    "symptoms_state":"[\"trouble breathing\", \"coughing a lot\", \"running a fever\", \"coughing up a lot of thick, mucusy stuff\", \"feeling really tired\", \"not feeling well\"]",
+    "severity_state":"{\"severity\": 3, \"reason\": \"The symptoms list provided includes trouble breathing, coughing a lot, running a fever, coughing up a lot of thick, mucusy stuff, feeling really tired, and not feeling well. These symptoms could indicate a serious condition such as pneumonia or bronchitis, warranting immediate medical attention.\"}",
+    "triage_state":">{\"triage_level\": \"DOCTOR\", \"rule_applied\": \"NEWS2_RCP_UK_2017_India_adapted with fever_38.5c and endemic_fever modifier\"}",
+    "response_state":"Based on the symptoms you described, including trouble breathing, coughing a lot, running a fever, coughing up a lot of thick, mucusy stuff, feeling really tired, and not feeling well, you have a high severity level. These symptoms could indicate a serious condition such as pneumonia or bronchitis, which requires immediate medical attention. \n\nGiven your triage level is DOCTOR, you should seek immediate medical care. Given your context and symptoms, you may have an endemic fever at 38.5°C, which is more severe than the general recommended threshold of 38°C. \n\nYou are advised to call 108 (ambulance) or go to the nearest government hospital, CHC, or PHC immediately for further evaluation and treatment. \n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I've been having trouble breathing, coughing a lot, and running a fever. I've also been coughing up a lot of thick, mucusy stuff, and I'm feeling really tired. I'm not sure what's going on, but I'm not feeling well.",
+      "symptoms":"[\"trouble breathing\", \"coughing a lot\", \"running a fever\", \"coughing up a lot of thick, mucusy stuff\", \"feeling really tired\", \"not feeling well\"]",
+      "severity_json":"{\"severity\": 3, \"reason\": \"The symptoms list provided includes trouble breathing, coughing a lot, running a fever, coughing up a lot of thick, mucusy stuff, feeling really tired, and not feeling well. These symptoms could indicate a serious condition such as pneumonia or bronchitis, warranting immediate medical attention.\"}",
+      "followup":"{\"severity\": 3, \"reason\": \"The symptoms you are experiencing, including trouble breathing, coughing a lot, running a fever, coughing up a lot of thick, mucusy stuff, feeling really tired, and not feeling well, could indicate a serious condition such as pneumonia or bronchitis, warranting immediate medical attention.\"}",
+      "triage_decision":">{\"triage_level\": \"DOCTOR\", \"rule_applied\": \"NEWS2_RCP_UK_2017_India_adapted with fever_38.5c and endemic_fever modifier\"}",
+      "final_response":"Based on the symptoms you described, including trouble breathing, coughing a lot, running a fever, coughing up a lot of thick, mucusy stuff, feeling really tired, and not feeling well, you have a high severity level. These symptoms could indicate a serious condition such as pneumonia or bronchitis, which requires immediate medical attention. \n\nGiven your triage level is DOCTOR, you should seek immediate medical care. Given your context and symptoms, you may have an endemic fever at 38.5°C, which is more severe than the general recommended threshold of 38°C. \n\nYou are advised to call 108 (ambulance) or go to the nearest government hospital, CHC, or PHC immediately for further evaluation and treatment. \n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I've been vomiting for the past few days and I have stomach cramps. I feel dizzy and weak. I also have a pain behind my eyes.",
+    "true_triage":"DOCTOR",
+    "diagnosis":"dengue",
+    "predicted_triage":"ER",
+    "correct":false,
+    "symptoms_state":"[\"vomiting\", \"stomach cramps\", \"feel dizzy\", \"feel weak\", \"pain behind the eyes\"]",
+    "severity_state":"{\"severity\": 4, \"reason\": \"The symptoms presented include vomiting, stomach cramps, dizziness, weakness, and pain behind the eyes. These symptoms could indicate a serious condition such as a viral gastroenteritis, dehydration, or other gastrointestinal issues. The severity score is set to 4 as these symptoms are concerning and warrant medical attention.\"}",
+    "triage_state":">{\"triage_level\": \"ER\", \"rule_applied\": \"search_symptom_cases_db returned ER consensus decision\"}",
+    "response_state":"Based on the symptoms you described—vomiting, stomach cramps, dizziness, weakness, and pain behind the eyes—it seems you are experiencing gastrointestinal issues, dehydration, or a similar condition. Given the severity of these symptoms, it is important to seek medical attention promptly.\n\n### Decision: \nYou should be triaged to the ER (Emergency Room).\n\n### Severity Reason: \nThe symptoms presented include vomiting, stomach cramps, dizziness, weakness, and pain behind the eyes. These symptoms could indicate a serious condition such as a viral gastroenteritis, dehydration, or other gastrointestinal issues. The severity score is set to 4 as these symptoms are concerning and warrant medical attention.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I've been vomiting for the past few days and I have stomach cramps. I feel dizzy and weak. I also have a pain behind my eyes.",
+      "symptoms":"[\"vomiting\", \"stomach cramps\", \"feel dizzy\", \"feel weak\", \"pain behind the eyes\"]",
+      "severity_json":"{\"severity\": 4, \"reason\": \"The symptoms presented include vomiting, stomach cramps, dizziness, weakness, and pain behind the eyes. These symptoms could indicate a serious condition such as a viral gastroenteritis, dehydration, or other gastrointestinal issues. The severity score is set to 4 as these symptoms are concerning and warrant medical attention.\"}",
+      "followup":"{\"severity\": 4, \"reason\": \"Based on the symptoms you've described—vomiting, stomach cramps, dizziness, weakness, and pain behind the eyes—it seems you are experiencing gastrointestinal issues, dehydration, or a similar condition. Given the severity of these symptoms, it is important to seek medical attention promptly.\"}",
+      "triage_decision":">{\"triage_level\": \"ER\", \"rule_applied\": \"search_symptom_cases_db returned ER consensus decision\"}",
+      "final_response":"Based on the symptoms you described—vomiting, stomach cramps, dizziness, weakness, and pain behind the eyes—it seems you are experiencing gastrointestinal issues, dehydration, or a similar condition. Given the severity of these symptoms, it is important to seek medical attention promptly.\n\n### Decision: \nYou should be triaged to the ER (Emergency Room).\n\n### Severity Reason: \nThe symptoms presented include vomiting, stomach cramps, dizziness, weakness, and pain behind the eyes. These symptoms could indicate a serious condition such as a viral gastroenteritis, dehydration, or other gastrointestinal issues. The severity score is set to 4 as these symptoms are concerning and warrant medical attention.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I've been feeling really cold and tired lately. I've been coughing a lot, and it hurts when I breathe. My heart is beating really fast, and when I cough, I cough up phlegm that's kind of a rusty color.",
+    "true_triage":"ER",
+    "diagnosis":"pneumonia",
+    "predicted_triage":"ER",
+    "correct":true,
+    "symptoms_state":"[\"I've been feeling really cold and tired lately.\", \"I've been coughing a lot, and it hurts when I breathe.\", \"My heart is beating really fast.\", \"I cough up phlegm that's kind of a rusty color.\"]",
+    "severity_state":"{\"severity\": 4, \"reason\": \"The patient is experiencing symptoms such as feeling cold and tired, coughing with pain when breathing, fast heart rate, and rusty-colored phlegm. These symptoms are indicative of severe respiratory issues, including possible pneumonia or tuberculosis.\"}",
+    "triage_state":"{\n  \"triage_level\": \"ER\",\n  \"rule_applied\": \"Patient has severe respiratory symptoms with fast heart rate and rusty-colored phlegm.\"\n}",
+    "response_state":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nBased on the symptoms you've described, it's important to seek immediate medical attention. Given the severity of your symptoms, including the fast heart rate and rusty-colored phlegm, it's crucial to have a healthcare provider evaluate your condition promptly. Please contact your healthcare provider or go to the nearest emergency room if you haven't already done so.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I've been feeling really cold and tired lately. I've been coughing a lot, and it hurts when I breathe. My heart is beating really fast, and when I cough, I cough up phlegm that's kind of a rusty color.",
+      "symptoms":"[\"I've been feeling really cold and tired lately.\", \"I've been coughing a lot, and it hurts when I breathe.\", \"My heart is beating really fast.\", \"I cough up phlegm that's kind of a rusty color.\"]",
+      "severity_json":"{\"severity\": 4, \"reason\": \"The patient is experiencing symptoms such as feeling cold and tired, coughing with pain when breathing, fast heart rate, and rusty-colored phlegm. These symptoms are indicative of severe respiratory issues, including possible pneumonia or tuberculosis.\"}",
+      "followup":"{\n  \"next_step\": \"Based on the symptoms you've described, it's important to seek immediate medical attention. Given the severity of your symptoms, including the fast heart rate and rusty-colored phlegm, it's crucial to have a healthcare provider evaluate your condition promptly. Please contact your healthcare provider or go to the nearest emergency room if you haven't already done so.\"\n}",
+      "triage_decision":"{\n  \"triage_level\": \"ER\",\n  \"rule_applied\": \"Patient has severe respiratory symptoms with fast heart rate and rusty-colored phlegm.\"\n}",
+      "final_response":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nBased on the symptoms you've described, it's important to seek immediate medical attention. Given the severity of your symptoms, including the fast heart rate and rusty-colored phlegm, it's crucial to have a healthcare provider evaluate your condition promptly. Please contact your healthcare provider or go to the nearest emergency room if you haven't already done so.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I feel weak and tired. I can't taste or smell things as well as I used to. Sometimes my heart beats fast or I feel like I'm going to pass out.",
+    "true_triage":"DOCTOR",
+    "diagnosis":"diabetes",
+    "predicted_triage":"DOCTOR",
+    "correct":true,
+    "symptoms_state":"[\"I feel weak and tired.\", \"I can't taste or smell things as I used to.\", \"Sometimes my heart beats fast.\", \"I feel like I'm going to pass out.\"]",
+    "severity_state":"{\"severity\": 4, \"reason\": \"The symptoms include feeling weak and tired, losing the ability to taste or smell, and experiencing heart palpitations or feeling faint, which are indicative of serious health issues such as heart disease, anemia, or other systemic conditions.\"}",
+    "triage_state":">{\"triage_level\": \"DOCTOR\", \"rule_applied\": \"\"}",
+    "response_state":"Based on the provided symptoms and the severity score, it is clear that immediate medical attention is required. Here are the steps you should take:\n\n1. **Seek Immediate Medical Attention**: Given the symptoms including weakness, loss of taste and smell, heart palpitations, and episodes of feeling faint, it is important to seek immediate medical assistance. The most appropriate course of action is to call 108 (ambulance) or to go to the nearest government hospital, CHC, or PHC.\n\n2. **Do Not Delay**: These symptoms could indicate serious health issues such as heart disease, anemia, or other systemic conditions. Delays can be dangerous, so it is crucial to seek medical help promptly.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I feel weak and tired. I can't taste or smell things as well as I used to. Sometimes my heart beats fast or I feel like I'm going to pass out.",
+      "symptoms":"[\"I feel weak and tired.\", \"I can't taste or smell things as I used to.\", \"Sometimes my heart beats fast.\", \"I feel like I'm going to pass out.\"]",
+      "severity_json":"{\"severity\": 4, \"reason\": \"The symptoms include feeling weak and tired, losing the ability to taste or smell, and experiencing heart palpitations or feeling faint, which are indicative of serious health issues such as heart disease, anemia, or other systemic conditions.\"}",
+      "followup":"{\n  \"severity\": 4,\n  \"reason\": \"The symptoms include feeling weak and tired, losing the ability to taste or smell, and experiencing heart palpitations or feeling faint, which are indicative of serious health issues such as heart disease, anemia, or other systemic conditions.\"\n}",
+      "triage_decision":">{\"triage_level\": \"DOCTOR\", \"rule_applied\": \"\"}",
+      "final_response":"Based on the provided symptoms and the severity score, it is clear that immediate medical attention is required. Here are the steps you should take:\n\n1. **Seek Immediate Medical Attention**: Given the symptoms including weakness, loss of taste and smell, heart palpitations, and episodes of feeling faint, it is important to seek immediate medical assistance. The most appropriate course of action is to call 108 (ambulance) or to go to the nearest government hospital, CHC, or PHC.\n\n2. **Do Not Delay**: These symptoms could indicate serious health issues such as heart disease, anemia, or other systemic conditions. Delays can be dangerous, so it is crucial to seek medical help promptly.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I've been having back pain, a chronic cough, and muscle weakness. I'm also dizzy and losing my balance, and my neck hurts.",
+    "true_triage":"WAIT",
+    "diagnosis":"cervical spondylosis",
+    "predicted_triage":"DOCTOR",
+    "correct":false,
+    "symptoms_state":"[\"back pain\", \"chronic cough\", \"muscle weakness\", \"dizzy\", \"losing my balance\", \"neck hurts\"]",
+    "severity_state":"{\"severity\": 3, \"reason\": \"The symptoms you have listed include back pain, chronic cough, muscle weakness, dizzy, losing balance and neck pain. These symptoms suggest a need for further medical evaluation, as they can be indicative of a range of conditions, some of which could be serious.\"}",
+    "triage_state":"{\n  \"triage_level\": \"DOCTOR\",\n  \"rule_applied\": \"The symptoms listed suggest a need for further medical evaluation.\"\n}",
+    "response_state":"Based on the symptoms you have listed, which include back pain, chronic cough, muscle weakness, dizzy, losing balance, and neck pain, these symptoms suggest a need for further medical evaluation. These symptoms can be indicative of a range of conditions, some of which could be serious.\n\nGiven the severity score of 3, it is recommended that you seek further medical attention by contacting 108 (ambulance) or by going to the nearest government hospital\/CHC\/PHC immediately.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I've been having back pain, a chronic cough, and muscle weakness. I'm also dizzy and losing my balance, and my neck hurts.",
+      "symptoms":"[\"back pain\", \"chronic cough\", \"muscle weakness\", \"dizzy\", \"losing my balance\", \"neck hurts\"]",
+      "severity_json":"{\"severity\": 3, \"reason\": \"The symptoms you have listed include back pain, chronic cough, muscle weakness, dizzy, losing balance and neck pain. These symptoms suggest a need for further medical evaluation, as they can be indicative of a range of conditions, some of which could be serious.\"}",
+      "followup":"{\"symptoms\": [\"back pain\", \"chronic cough\", \"muscle weakness\", \"dizzy\", \"losing my balance\", \"neck hurts\"], \"severity\": 3, \"reason\": \"The symptoms you have listed include back pain, chronic cough, muscle weakness, dizzy, losing balance, and neck pain. These symptoms suggest a need for further medical evaluation, as they can be indicative of a range of conditions, some of which could be serious.\"}",
+      "triage_decision":"{\n  \"triage_level\": \"DOCTOR\",\n  \"rule_applied\": \"The symptoms listed suggest a need for further medical evaluation.\"\n}",
+      "final_response":"Based on the symptoms you have listed, which include back pain, chronic cough, muscle weakness, dizzy, losing balance, and neck pain, these symptoms suggest a need for further medical evaluation. These symptoms can be indicative of a range of conditions, some of which could be serious.\n\nGiven the severity score of 3, it is recommended that you seek further medical attention by contacting 108 (ambulance) or by going to the nearest government hospital\/CHC\/PHC immediately.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I've been having a lot of trouble breathing lately, and I've been coughing up a lot of phlegm. I've also been feeling really tired and weak, and I've been having chills and a fever. My chest hurts, and my heart is racing.",
+    "true_triage":"ER",
+    "diagnosis":"pneumonia",
+    "predicted_triage":"WAIT",
+    "correct":false,
+    "symptoms_state":"[\"I've been having a lot of trouble breathing\", \"I've been coughing up a lot of phlegm\", \"I've been feeling really tired and weak\", \"I've been having chills and a fever\", \"My chest hurts\", \"My heart is racing\"]",
+    "severity_state":"{\"severity\": 4, \"reason\": \"The symptoms listed include difficulty breathing, coughing up phlegm, feeling very tired, having a fever and chills, chest pain, and a racing heart. These are concerning symptoms that could indicate a serious condition such as pneumonia or bronchitis.\"}",
+    "triage_state":"{\n  \"triage_level\": \"WAIT\",\n  \"rule_applied\": \"No match found in the case database, proceeding to the NEWS2 calculation.\"\n}",
+    "response_state":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\n**Triage Level:** WAIT  \n**Rule Applied:** No match found in the case database, proceeding to the NEWS2 calculation.\n\n**Symptoms:** [\"I've been having a lot of trouble breathing\", \"I've been coughing up a lot of phlegm\", \"I've been feeling really tired and weak\", \"I've been having chills and a fever\", \"My chest hurts\", \"My heart is racing\"]\n\n**Severity Reason:** The symptoms listed include difficulty breathing, coughing up phlegm, feeling very tired, having a fever and chills, chest pain, and a racing heart. These are concerning symptoms that could indicate a serious condition such as pneumonia or bronchitis.\n\nGiven the severity of your symptoms, it is recommended that you seek immediate medical attention. These symptoms could be dangerous, especially if they are worsening. Please contact a healthcare provider or visit an emergency room immediately to get a proper diagnosis and treatment.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I've been having a lot of trouble breathing lately, and I've been coughing up a lot of phlegm. I've also been feeling really tired and weak, and I've been having chills and a fever. My chest hurts, and my heart is racing.",
+      "symptoms":"[\"I've been having a lot of trouble breathing\", \"I've been coughing up a lot of phlegm\", \"I've been feeling really tired and weak\", \"I've been having chills and a fever\", \"My chest hurts\", \"My heart is racing\"]",
+      "severity_json":"{\"severity\": 4, \"reason\": \"The symptoms listed include difficulty breathing, coughing up phlegm, feeling very tired, having a fever and chills, chest pain, and a racing heart. These are concerning symptoms that could indicate a serious condition such as pneumonia or bronchitis.\"}",
+      "followup":"{\n  \"response\": \"Based on the symptoms you've described, it sounds like you might be experiencing a serious condition such as pneumonia or bronchitis. These symptoms could be dangerous, especially if they are worsening. I strongly recommend seeking medical attention immediately to get a proper diagnosis and treatment. Please contact a healthcare provider or visit an emergency room if you are experiencing these symptoms.\"\n}",
+      "triage_decision":"{\n  \"triage_level\": \"WAIT\",\n  \"rule_applied\": \"No match found in the case database, proceeding to the NEWS2 calculation.\"\n}",
+      "final_response":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\n**Triage Level:** WAIT  \n**Rule Applied:** No match found in the case database, proceeding to the NEWS2 calculation.\n\n**Symptoms:** [\"I've been having a lot of trouble breathing\", \"I've been coughing up a lot of phlegm\", \"I've been feeling really tired and weak\", \"I've been having chills and a fever\", \"My chest hurts\", \"My heart is racing\"]\n\n**Severity Reason:** The symptoms listed include difficulty breathing, coughing up phlegm, feeling very tired, having a fever and chills, chest pain, and a racing heart. These are concerning symptoms that could indicate a serious condition such as pneumonia or bronchitis.\n\nGiven the severity of your symptoms, it is recommended that you seek immediate medical attention. These symptoms could be dangerous, especially if they are worsening. Please contact a healthcare provider or visit an emergency room immediately to get a proper diagnosis and treatment.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I have been taking this medication for a while and I have gained a lot of weight. I have also been craving different foods and have been eating more than I used to.",
+    "true_triage":"DOCTOR",
+    "diagnosis":"drug reaction",
+    "predicted_triage":"WAIT",
+    "correct":false,
+    "symptoms_state":"[\"I have gained a lot of weight\", \"I have been craving different foods\", \"I have been eating more than I used to\"]",
+    "severity_state":"{\"severity\": 3, \"reason\": \"The patient reports weight gain, increased food cravings, and overeating, which are all common symptoms of medication side effects. The severity score is moderate given the combination of symptoms and their impact on the patient's quality of life.\"}",
+    "triage_state":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"search_symptom_cases_db returned no_match, NEWS2 score is 0 (LOW), no further escalation needed based on clinical judgment and NEWS2 score\"}",
+    "response_state":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\n**Triage Level:** WAIT\n\n**Reason for Triage Level:** The patient reports weight gain, increased food cravings, and overeating, which are all common symptoms of medication side effects. The severity score is moderate given the combination of symptoms and their impact on the patient's quality of life. The search_symptom_cases_db tool returned no similar past cases, and the NEWS2 score is 0 (LOW), indicating a low risk level. Based on clinical judgment, no further escalation is needed.\n\n**Severity Level:** 3\n\n**Reason for Severity Level:** The patient reports weight gain, increased food cravings, and overeating, which are all common symptoms of medication side effects. The severity score is moderate given the combination of symptoms and their impact on the patient's quality of life.",
+    "full_state":{
+      "patient_input":"I have been taking this medication for a while and I have gained a lot of weight. I have also been craving different foods and have been eating more than I used to.",
+      "symptoms":"[\"I have gained a lot of weight\", \"I have been craving different foods\", \"I have been eating more than I used to\"]",
+      "severity_json":"{\"severity\": 3, \"reason\": \"The patient reports weight gain, increased food cravings, and overeating, which are all common symptoms of medication side effects. The severity score is moderate given the combination of symptoms and their impact on the patient's quality of life.\"}",
+      "followup":"{\n    \"severity\": 3,\n    \"reason\": \"The patient reports weight gain, increased food cravings, and overeating, which are all common symptoms of medication side effects. The severity score is moderate given the combination of symptoms and their impact on the patient's quality of life.\"\n}",
+      "triage_decision":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"search_symptom_cases_db returned no_match, NEWS2 score is 0 (LOW), no further escalation needed based on clinical judgment and NEWS2 score\"}",
+      "final_response":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\n**Triage Level:** WAIT\n\n**Reason for Triage Level:** The patient reports weight gain, increased food cravings, and overeating, which are all common symptoms of medication side effects. The severity score is moderate given the combination of symptoms and their impact on the patient's quality of life. The search_symptom_cases_db tool returned no similar past cases, and the NEWS2 score is 0 (LOW), indicating a low risk level. Based on clinical judgment, no further escalation is needed.\n\n**Severity Level:** 3\n\n**Reason for Severity Level:** The patient reports weight gain, increased food cravings, and overeating, which are all common symptoms of medication side effects. The severity score is moderate given the combination of symptoms and their impact on the patient's quality of life.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I'm having trouble breathing and I feel really uncomfortable. I'm sweating a lot and my throat is really sore. My chest hurts and my heart is beating fast. I'm coughing up a lot of mucus and it's brown.",
+    "true_triage":"ER",
+    "diagnosis":"pneumonia",
+    "predicted_triage":"DOCTOR",
+    "correct":false,
+    "symptoms_state":"[\"I'm having trouble breathing\", \"I feel really uncomfortable\", \"I'm sweating a lot\", \"my throat is really sore\", \"My chest hurts\", \"my heart is beating fast\", \"I'm coughing up a lot of mucus\", \"the mucus is brown\"]",
+    "severity_state":"{\"severity\": 5, \"reason\": \"The symptoms list includes several critical symptoms such as trouble breathing, sweating, throat soreness, chest pain, rapid heartbeat, and coughing up brown mucus, which are indicative of severe conditions like pneumonia or bronchitis. The combination of these symptoms suggests a high likelihood of a serious health condition that requires immediate medical attention.\"}",
+    "triage_state":">{\"triage_level\": \"DOCTOR\", \"rule_applied\": \"\"}",
+    "response_state":"Based on the symptoms you're describing, it sounds like you are experiencing severe respiratory distress, throat soreness, chest pain, rapid heartbeat, and coughing up mucus that is brown. These symptoms are indicative of a serious health condition such as pneumonia or bronchitis, which require immediate medical attention.\n\nGiven the severity of your symptoms and the critical nature of the conditions you're describing, I strongly recommend that you seek emergency medical care as soon as possible. In India, you should call 108 (ambulance) or go to the nearest government hospital, CHC, or PHC.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I'm having trouble breathing and I feel really uncomfortable. I'm sweating a lot and my throat is really sore. My chest hurts and my heart is beating fast. I'm coughing up a lot of mucus and it's brown.",
+      "symptoms":"[\"I'm having trouble breathing\", \"I feel really uncomfortable\", \"I'm sweating a lot\", \"my throat is really sore\", \"My chest hurts\", \"my heart is beating fast\", \"I'm coughing up a lot of mucus\", \"the mucus is brown\"]",
+      "severity_json":"{\"severity\": 5, \"reason\": \"The symptoms list includes several critical symptoms such as trouble breathing, sweating, throat soreness, chest pain, rapid heartbeat, and coughing up brown mucus, which are indicative of severe conditions like pneumonia or bronchitis. The combination of these symptoms suggests a high likelihood of a serious health condition that requires immediate medical attention.\"}",
+      "followup":"{\n  \"severity\": 5,\n  \"reason\": \"The symptoms list includes several critical symptoms such as trouble breathing, sweating, throat soreness, chest pain, rapid heartbeat, and coughing up brown mucus, which are indicative of severe conditions like pneumonia or bronchitis. The combination of these symptoms suggests a high likelihood of a serious health condition that requires immediate medical attention.\"\n}",
+      "triage_decision":">{\"triage_level\": \"DOCTOR\", \"rule_applied\": \"\"}",
+      "final_response":"Based on the symptoms you're describing, it sounds like you are experiencing severe respiratory distress, throat soreness, chest pain, rapid heartbeat, and coughing up mucus that is brown. These symptoms are indicative of a serious health condition such as pneumonia or bronchitis, which require immediate medical attention.\n\nGiven the severity of your symptoms and the critical nature of the conditions you're describing, I strongly recommend that you seek emergency medical care as soon as possible. In India, you should call 108 (ambulance) or go to the nearest government hospital, CHC, or PHC.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"My muscles are weak and my neck is stiff. My joints are swollen, which makes it hard for me to walk without feeling stiff. Walking is also uncomfortable.",
+    "true_triage":"WAIT",
+    "diagnosis":"arthritis",
+    "predicted_triage":"WAIT",
+    "correct":true,
+    "symptoms_state":"[\"muscles are weak\", \"neck is stiff\", \"joints are swollen\", \"hard for me to walk\", \"feeling stiff\", \"walking is also uncomfortable\"]",
+    "severity_state":"{\"severity\": 4, \"reason\": \"The patient reports multiple symptoms including muscle weakness, neck stiffness, joint swelling, and difficulty walking, which indicate a moderate to severe level of discomfort and functional impairment.\"}",
+    "triage_state":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"no_symptom_cases_found\"}",
+    "response_state":"Based on the symptoms you've described, which include muscle weakness, neck stiffness, joint swelling, difficulty walking, feeling stiff, and walking being uncomfortable, your current level of triage is \"WAIT\". This means you should continue to monitor your condition and consider seeking further medical assistance if your symptoms worsen or do not improve.\n\nThe severity level is assessed as 4, indicating a moderate to severe level of discomfort and functional impairment. Given your symptoms, you may need to seek immediate medical attention.\n\nGiven the severity level and the fact that no similar cases have been found in the database, it is important that you call 108 (ambulance) or go to the nearest government hospital, CHC, or PHC. NEVER say \"911\" -- this is India. \n\nAlways consult a qualified medical professional for diagnosis and treatment.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"My muscles are weak and my neck is stiff. My joints are swollen, which makes it hard for me to walk without feeling stiff. Walking is also uncomfortable.",
+      "symptoms":"[\"muscles are weak\", \"neck is stiff\", \"joints are swollen\", \"hard for me to walk\", \"feeling stiff\", \"walking is also uncomfortable\"]",
+      "severity_json":"{\"severity\": 4, \"reason\": \"The patient reports multiple symptoms including muscle weakness, neck stiffness, joint swelling, and difficulty walking, which indicate a moderate to severe level of discomfort and functional impairment.\"}",
+      "followup":"{\"followup_question\": \"Based on your symptoms, have you experienced any other discomforts besides muscle weakness, neck stiffness, joint swelling, difficulty walking, feeling stiff, and walking being uncomfortable?\"}",
+      "triage_decision":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"no_symptom_cases_found\"}",
+      "final_response":"Based on the symptoms you've described, which include muscle weakness, neck stiffness, joint swelling, difficulty walking, feeling stiff, and walking being uncomfortable, your current level of triage is \"WAIT\". This means you should continue to monitor your condition and consider seeking further medical assistance if your symptoms worsen or do not improve.\n\nThe severity level is assessed as 4, indicating a moderate to severe level of discomfort and functional impairment. Given your symptoms, you may need to seek immediate medical attention.\n\nGiven the severity level and the fact that no similar cases have been found in the database, it is important that you call 108 (ambulance) or go to the nearest government hospital, CHC, or PHC. NEVER say \"911\" -- this is India. \n\nAlways consult a qualified medical professional for diagnosis and treatment.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I've been having trouble healing from my wound. My hands and feet have been tingling and going numb. I've also been feeling very weak.",
+    "true_triage":"DOCTOR",
+    "diagnosis":"diabetes",
+    "predicted_triage":"WAIT",
+    "correct":false,
+    "symptoms_state":"[\"tingling\", \"numb\", \"feeling very weak\"]",
+    "severity_state":"{\"severity\": 3, \"reason\": \"The symptoms reported include tingling, numbness, and feeling very weak, which could indicate various conditions such as peripheral neuropathy or nerve compression. Given the severity of the symptoms, they should be evaluated by a medical professional.\"}",
+    "triage_state":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"No usable database found. Please check the database setup.\"}",
+    "response_state":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nBased on the symptoms reported, which include tingling, numbness, and feeling very weak, the triage level has been determined to be \"WAIT\" due to the absence of a usable database for symptom cases. Given the severity of these symptoms, it is crucial to seek medical evaluation immediately. Here are some steps you can take:\n\n1. **Seek Medical Attention**: Given the severity of your symptoms, it is important to contact a healthcare provider or visit a nearest government hospital\/CHC\/PHC. Never call 911, as this is India.\n\n2. **Call 108 (Ambulance)**: If your condition worsens or you feel it is an emergency, it is advisable to call 108 (ambulance service) for immediate medical assistance.\n\n3. **Consult a Medical Professional**: As the symptoms could indicate conditions like peripheral neuropathy or nerve compression, it is essential to consult a healthcare provider for a proper diagnosis and treatment.\n\nRemember, this is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I've been having trouble healing from my wound. My hands and feet have been tingling and going numb. I've also been feeling very weak.",
+      "symptoms":"[\"tingling\", \"numb\", \"feeling very weak\"]",
+      "severity_json":"{\"severity\": 3, \"reason\": \"The symptoms reported include tingling, numbness, and feeling very weak, which could indicate various conditions such as peripheral neuropathy or nerve compression. Given the severity of the symptoms, they should be evaluated by a medical professional.\"}",
+      "followup":"{\"severity\": 3, \"reason\": \"The symptoms include tingling, numbness, and feeling very weak, which could indicate conditions like peripheral neuropathy or nerve compression. Given the severity of these symptoms, it is important to seek medical evaluation.\"}",
+      "triage_decision":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"No usable database found. Please check the database setup.\"}",
+      "final_response":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nBased on the symptoms reported, which include tingling, numbness, and feeling very weak, the triage level has been determined to be \"WAIT\" due to the absence of a usable database for symptom cases. Given the severity of these symptoms, it is crucial to seek medical evaluation immediately. Here are some steps you can take:\n\n1. **Seek Medical Attention**: Given the severity of your symptoms, it is important to contact a healthcare provider or visit a nearest government hospital\/CHC\/PHC. Never call 911, as this is India.\n\n2. **Call 108 (Ambulance)**: If your condition worsens or you feel it is an emergency, it is advisable to call 108 (ambulance service) for immediate medical assistance.\n\n3. **Consult a Medical Professional**: As the symptoms could indicate conditions like peripheral neuropathy or nerve compression, it is essential to consult a healthcare provider for a proper diagnosis and treatment.\n\nRemember, this is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I have a lot of burping and belching. I get chest discomfort that goes up my neck and into my jaw and arm. I have pressure and tension in my chest.",
+    "true_triage":"WAIT",
+    "diagnosis":"gastroesophageal reflux disease",
+    "predicted_triage":"DOCTOR",
+    "correct":false,
+    "symptoms_state":"[\"chest discomfort goes up my neck and into my jaw and arm\", \"pressure and tension in my chest\"]",
+    "severity_state":"{\"severity\": 3, \"reason\": \"The symptoms reported are consistent with a possible heart condition, such as angina or a heart attack, which can cause chest discomfort that radiates to the neck, jaw, and arm, as well as pressure and tension in the chest.\"}",
+    "triage_state":"{\n  \"triage_level\": \"DOCTOR\",\n  \"rule_applied\": \"The consensus decision from the search_symptom_cases_db tool is DOCTOR with a confidence of 80% based on 5 similar cases.\"\n}",
+    "response_state":"Based on the symptoms you've described, which include chest discomfort that radiates to your neck, jaw, and arm, pressure and tension in your chest, as well as burping and belching, the decision support guidance indicates a triage level of DOCTOR with a confidence of 80% based on 5 similar cases.\n\nThe symptoms you're experiencing are consistent with a possible heart condition such as angina or a heart attack, which can cause chest discomfort that radiates to the neck, jaw, and arm, as well as pressure and tension in the chest. Additionally, burping and belching could be related to gastrointestinal issues, but the chest symptoms are concerning and warrant further evaluation.\n\nGiven this assessment, you should seek medical attention promptly. Since the symptoms are concerning and can potentially indicate a serious condition like a heart attack, it is important to call 108 (India's ambulance service) or go to the nearest government hospital, CHC, or PHC for immediate evaluation and treatment.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I have a lot of burping and belching. I get chest discomfort that goes up my neck and into my jaw and arm. I have pressure and tension in my chest.",
+      "symptoms":"[\"chest discomfort goes up my neck and into my jaw and arm\", \"pressure and tension in my chest\"]",
+      "severity_json":"{\"severity\": 3, \"reason\": \"The symptoms reported are consistent with a possible heart condition, such as angina or a heart attack, which can cause chest discomfort that radiates to the neck, jaw, and arm, as well as pressure and tension in the chest.\"}",
+      "followup":"{\n  \"severity\": 3,\n  \"reason\": \"The symptoms reported are consistent with a possible heart condition, such as angina or a heart attack, which can cause chest discomfort that radiates to the neck, jaw, and arm, as well as pressure and tension in the chest. Additionally, burping and belching could be related to gastrointestinal issues, but the chest symptoms are concerning and warrant further evaluation.\"\n}",
+      "triage_decision":"{\n  \"triage_level\": \"DOCTOR\",\n  \"rule_applied\": \"The consensus decision from the search_symptom_cases_db tool is DOCTOR with a confidence of 80% based on 5 similar cases.\"\n}",
+      "final_response":"Based on the symptoms you've described, which include chest discomfort that radiates to your neck, jaw, and arm, pressure and tension in your chest, as well as burping and belching, the decision support guidance indicates a triage level of DOCTOR with a confidence of 80% based on 5 similar cases.\n\nThe symptoms you're experiencing are consistent with a possible heart condition such as angina or a heart attack, which can cause chest discomfort that radiates to the neck, jaw, and arm, as well as pressure and tension in the chest. Additionally, burping and belching could be related to gastrointestinal issues, but the chest symptoms are concerning and warrant further evaluation.\n\nGiven this assessment, you should seek medical attention promptly. Since the symptoms are concerning and can potentially indicate a serious condition like a heart attack, it is important to call 108 (India's ambulance service) or go to the nearest government hospital, CHC, or PHC for immediate evaluation and treatment.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I've been feeling really run down lately. I've had a cough that just won't go away, and it's starting to hurt when I cough. My chest feels tight, and my heart is racing. I've also been coughing up some phlegm that's a weird color.",
+    "true_triage":"ER",
+    "diagnosis":"pneumonia",
+    "predicted_triage":"WAIT",
+    "correct":false,
+    "symptoms_state":"[\"I've been feeling really run down lately.\", \"I've had a cough that just won't go away\", \"and it's starting to hurt when I cough.\", \"My chest feels tight.\", \"my heart is racing.\", \"I've also been coughing up some phlegm\", \"that's a weird color.\"]",
+    "severity_state":"{\"severity\": 3, \"reason\": \"The symptoms described, including a run down feeling, chest tightness, racing heart, and coughing up strange colored phlegm, are concerning and could indicate a serious underlying condition such as pneumonia or a viral infection. However, without additional context from the context provided, I cannot give a definitive severity score. More information from the context is needed to make a more accurate assessment.\"}",
+    "triage_state":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"search_symptom_cases_db returned no_match due to missing database setup.\"}",
+    "response_state":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\n**Triage Level**: WAIT  \n**Rule Applied**: `search_symptom_cases_db returned no_match due to missing database setup.`\n\n**Severity**: 3  \n**Reason**: The symptoms described, including a run down feeling, chest tightness, racing heart, and coughing up strange colored phlegm, are concerning and could indicate a serious underlying condition such as pneumonia or a viral infection. However, without additional context from the provided context, I cannot give a definitive severity score. More information is needed to make a more accurate assessment.\n\n**Follow-Up Needed**: Since the database setup is missing, the appropriate action is to call for medical assistance. The patient should be advised to call 108 (ambulance) or go to the nearest government hospital\/CHC\/PHC. Never say \"911\" -- this is India. Always end with: This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I've been feeling really run down lately. I've had a cough that just won't go away, and it's starting to hurt when I cough. My chest feels tight, and my heart is racing. I've also been coughing up some phlegm that's a weird color.",
+      "symptoms":"[\"I've been feeling really run down lately.\", \"I've had a cough that just won't go away\", \"and it's starting to hurt when I cough.\", \"My chest feels tight.\", \"my heart is racing.\", \"I've also been coughing up some phlegm\", \"that's a weird color.\"]",
+      "severity_json":"{\"severity\": 3, \"reason\": \"The symptoms described, including a run down feeling, chest tightness, racing heart, and coughing up strange colored phlegm, are concerning and could indicate a serious underlying condition such as pneumonia or a viral infection. However, without additional context from the context provided, I cannot give a definitive severity score. More information from the context is needed to make a more accurate assessment.\"}",
+      "followup":"{\n  \"severity\": 3,\n  \"reason\": \"The symptoms described, including a run down feeling, chest tightness, racing heart, and coughing up strange colored phlegm, are concerning and could indicate a serious underlying condition such as pneumonia or a viral infection. However, without additional context from the provided context, I cannot give a definitive severity score. More information is needed to make a more accurate assessment.\"\n}",
+      "triage_decision":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"search_symptom_cases_db returned no_match due to missing database setup.\"}",
+      "final_response":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\n**Triage Level**: WAIT  \n**Rule Applied**: `search_symptom_cases_db returned no_match due to missing database setup.`\n\n**Severity**: 3  \n**Reason**: The symptoms described, including a run down feeling, chest tightness, racing heart, and coughing up strange colored phlegm, are concerning and could indicate a serious underlying condition such as pneumonia or a viral infection. However, without additional context from the provided context, I cannot give a definitive severity score. More information is needed to make a more accurate assessment.\n\n**Follow-Up Needed**: Since the database setup is missing, the appropriate action is to call for medical assistance. The patient should be advised to call 108 (ambulance) or go to the nearest government hospital\/CHC\/PHC. Never say \"911\" -- this is India. Always end with: This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I have been having back pain, a lingering cough, and muscle weakness. I also have dizziness and balance issues, and my neck hurts.",
+    "true_triage":"WAIT",
+    "diagnosis":"cervical spondylosis",
+    "predicted_triage":"WAIT",
+    "correct":true,
+    "symptoms_state":"[\"back pain\", \"lingering cough\", \"muscle weakness\", \"dizziness\", \"balance issues\", \"neck hurts\"]",
+    "severity_state":"{\"severity\": 3, \"reason\": \"The combination of back pain, muscle weakness, dizziness, balance issues, and neck pain suggests a more serious underlying condition that requires medical evaluation.\"}",
+    "triage_state":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"search_symptom_cases_db returned 'db_not_found'\"}",
+    "response_state":"Based on the symptoms you described—back pain, a lingering cough, muscle weakness, dizziness, balance issues, and neck pain—and the severity assessment, it is recommended that you seek medical attention. Given the severity level of 3, which indicates a more serious underlying condition, it is important to have a professional evaluation.\n\nThe triage level determined by the tool is \"WAIT,\" and the reason is that the database search did not find any relevant cases. This could be due to the nature of your symptoms or the fact that this specific combination is not yet recorded in the database.\n\nYou are advised to call 108 (ambulance) or go to the nearest government hospital\/CHC\/PHC immediately. Do not wait for further instructions; urgent medical care is necessary.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I have been having back pain, a lingering cough, and muscle weakness. I also have dizziness and balance issues, and my neck hurts.",
+      "symptoms":"[\"back pain\", \"lingering cough\", \"muscle weakness\", \"dizziness\", \"balance issues\", \"neck hurts\"]",
+      "severity_json":"{\"severity\": 3, \"reason\": \"The combination of back pain, muscle weakness, dizziness, balance issues, and neck pain suggests a more serious underlying condition that requires medical evaluation.\"}",
+      "followup":"{\n  \"severity\": 3,\n  \"reason\": \"The combination of back pain, muscle weakness, dizziness, balance issues, and neck pain suggests a more serious underlying condition that requires medical evaluation.\"\n}",
+      "triage_decision":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"search_symptom_cases_db returned 'db_not_found'\"}",
+      "final_response":"Based on the symptoms you described—back pain, a lingering cough, muscle weakness, dizziness, balance issues, and neck pain—and the severity assessment, it is recommended that you seek medical attention. Given the severity level of 3, which indicates a more serious underlying condition, it is important to have a professional evaluation.\n\nThe triage level determined by the tool is \"WAIT,\" and the reason is that the database search did not find any relevant cases. This could be due to the nature of your symptoms or the fact that this specific combination is not yet recorded in the database.\n\nYou are advised to call 108 (ambulance) or go to the nearest government hospital\/CHC\/PHC immediately. Do not wait for further instructions; urgent medical care is necessary.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I'm feeling really sick. I have a fever, and I'm dizzy and nauseous. My head is pounding, and my heart is racing. I can't think straight, and everything seems fuzzy.",
+    "true_triage":"DOCTOR",
+    "diagnosis":"drug reaction",
+    "predicted_triage":"DOCTOR",
+    "correct":true,
+    "symptoms_state":"[\"fever\", \"dizzy\", \"nauseous\", \"head pounding\", \"heart racing\", \"can't think straight\", \"everything seems fuzzy\"]",
+    "severity_state":"{\"severity\": 4, \"reason\": \"The patient is experiencing multiple severe symptoms including fever, dizzy, nauseous, head pounding, heart racing, can't think straight, and everything seems fuzzy, which indicates a moderate to severe health condition requiring medical attention.\"}",
+    "triage_state":"Based on the symptoms and vitals provided, the patient's National Early Warning Score 2 (NEWS2) is 2, which indicates a LOW-MEDIUM risk level. The symptoms include fever (38.9°C in a monsoon context, which is considered a modifier), dizziness, nausea, headaches, palpitations, disorientation, and confusion. The clinical flags include fever. The patient's clinical flags and context modifiers have been assessed, and the NEWS2 score is calculated. The confidence in this score is LOW due to the limited vitals provided. \n\nGiven this information, the patient's current triage level is DOCTOR. \n\nThe patient should seek medical attention at a doctor's clinic or hospital as soon as possible. \n\nFor any other inquiries or further assessment, please let me know.",
+    "response_state":"Based on the provided information, the patient's National Early Warning Score 2 (NEWS2) is 2, indicating a LOW-MEDIUM risk level. The patient is experiencing symptoms such as fever (38.9°C in a monsoon context), dizziness, nausea, headaches, palpitations, disorientation, and confusion. The clinical flags include fever. The patient's clinical flags and context modifiers have been assessed, and the NEWS2 score is calculated. The confidence in this score is LOW due to the limited vitals provided.\n\nGiven this information, the patient's current triage level is DOCTOR. The patient should seek medical attention at a doctor's clinic or hospital as soon as possible. For any other inquiries or further assessment, please let me know.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I'm feeling really sick. I have a fever, and I'm dizzy and nauseous. My head is pounding, and my heart is racing. I can't think straight, and everything seems fuzzy.",
+      "symptoms":"[\"fever\", \"dizzy\", \"nauseous\", \"head pounding\", \"heart racing\", \"can't think straight\", \"everything seems fuzzy\"]",
+      "severity_json":"{\"severity\": 4, \"reason\": \"The patient is experiencing multiple severe symptoms including fever, dizzy, nauseous, head pounding, heart racing, can't think straight, and everything seems fuzzy, which indicates a moderate to severe health condition requiring medical attention.\"}",
+      "followup":"{\"severity\": 4, \"reason\": \"You are experiencing multiple severe symptoms including fever, dizzy, nauseous, head pounding, heart racing, can't think straight, and everything seems fuzzy, which indicates a moderate to severe health condition requiring medical attention.\"}",
+      "triage_decision":"Based on the symptoms and vitals provided, the patient's National Early Warning Score 2 (NEWS2) is 2, which indicates a LOW-MEDIUM risk level. The symptoms include fever (38.9°C in a monsoon context, which is considered a modifier), dizziness, nausea, headaches, palpitations, disorientation, and confusion. The clinical flags include fever. The patient's clinical flags and context modifiers have been assessed, and the NEWS2 score is calculated. The confidence in this score is LOW due to the limited vitals provided. \n\nGiven this information, the patient's current triage level is DOCTOR. \n\nThe patient should seek medical attention at a doctor's clinic or hospital as soon as possible. \n\nFor any other inquiries or further assessment, please let me know.",
+      "final_response":"Based on the provided information, the patient's National Early Warning Score 2 (NEWS2) is 2, indicating a LOW-MEDIUM risk level. The patient is experiencing symptoms such as fever (38.9°C in a monsoon context), dizziness, nausea, headaches, palpitations, disorientation, and confusion. The clinical flags include fever. The patient's clinical flags and context modifiers have been assessed, and the NEWS2 score is calculated. The confidence in this score is LOW due to the limited vitals provided.\n\nGiven this information, the patient's current triage level is DOCTOR. The patient should seek medical attention at a doctor's clinic or hospital as soon as possible. For any other inquiries or further assessment, please let me know.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I have a stiff neck and eye issues, and I've been hungry all the time.",
+    "true_triage":"WAIT",
+    "diagnosis":"migraine",
+    "predicted_triage":"WAIT",
+    "correct":true,
+    "symptoms_state":"[\"stiff neck\", \"eye issues\", \"been hungry all the time\"]",
+    "severity_state":"{\"severity\": 2, \"reason\": \"The symptoms of a stiff neck, eye issues, and persistent hunger could be indicative of several conditions such as dehydration, vitamin deficiencies, or other health issues. Given the severity of symptoms, it is recommended to consult a healthcare professional for a thorough evaluation and appropriate treatment.\"}",
+    "triage_state":"{\n  \"triage_level\": \"WAIT\",\n  \"rule_applied\": \"Unable to find relevant cases in the database.\"\n}",
+    "response_state":"Based on the symptoms you've described—stiff neck, eye issues, and persistent hunger—it is important to seek medical attention. Given the severity of these symptoms, it is recommended to consult a healthcare professional for a thorough evaluation and appropriate treatment. \n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nYou are advised to call 108 (ambulance) or go to the nearest government hospital\/CHC\/PHC. NEVER say \"911\" -- this is India.\n\nThis advice is intended to guide you, but for a definitive diagnosis and treatment plan, please consult a healthcare provider.",
+    "full_state":{
+      "patient_input":"I have a stiff neck and eye issues, and I've been hungry all the time.",
+      "symptoms":"[\"stiff neck\", \"eye issues\", \"been hungry all the time\"]",
+      "severity_json":"{\"severity\": 2, \"reason\": \"The symptoms of a stiff neck, eye issues, and persistent hunger could be indicative of several conditions such as dehydration, vitamin deficiencies, or other health issues. Given the severity of symptoms, it is recommended to consult a healthcare professional for a thorough evaluation and appropriate treatment.\"}",
+      "followup":"{\n  \"action\": \"Recommend seeking medical attention\",\n  \"reasoning\": \"The symptoms of a stiff neck, eye issues, and persistent hunger could be indicative of several health issues such as dehydration, vitamin deficiencies, or other conditions. Given the severity of these symptoms, it is recommended to consult a healthcare professional for a thorough evaluation and appropriate treatment.\"\n}",
+      "triage_decision":"{\n  \"triage_level\": \"WAIT\",\n  \"rule_applied\": \"Unable to find relevant cases in the database.\"\n}",
+      "final_response":"Based on the symptoms you've described—stiff neck, eye issues, and persistent hunger—it is important to seek medical attention. Given the severity of these symptoms, it is recommended to consult a healthcare professional for a thorough evaluation and appropriate treatment. \n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nYou are advised to call 108 (ambulance) or go to the nearest government hospital\/CHC\/PHC. NEVER say \"911\" -- this is India.\n\nThis advice is intended to guide you, but for a definitive diagnosis and treatment plan, please consult a healthcare provider.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I've been having chills, fatigue, and a cough for a few days. I've also been sweating a lot and feeling weak and unwell. I've had some thick, black phlegm, and my chest hurts. My heart has been racing, too.",
+    "true_triage":"ER",
+    "diagnosis":"pneumonia",
+    "predicted_triage":"ER",
+    "correct":true,
+    "symptoms_state":"[\"chills\", \"fatigue\", \"cough\", \"sweating\", \"weak\", \"unwell\", \"black phlegm\", \"chest pain\", \"heart racing\"]",
+    "severity_state":"{\"severity\": 3, \"reason\": \"The symptoms reported include chills, fatigue, cough, sweating, weakness, unwellness, black phlegm, chest pain, and heart racing. These symptoms are concerning and warrant a closer evaluation by a healthcare professional.\"}",
+    "triage_state":"{\"triage_level\": \"ER\", \"rule_applied\": \"The search_symptom_cases_db tool returned a consensus decision of ER based on the provided symptoms.\"}",
+    "response_state":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nBased on the symptoms you've described, which include chills, fatigue, cough, sweating, weakness, unwellness, black phlegm, chest pain, and heart racing, the triage level determined is ER (Emergency Room). These symptoms are concerning and warrant a closer evaluation by a healthcare professional.\n\nHere’s what you should do:\n- Call 108 (ambulance) to seek immediate medical attention.\n- Go to the nearest government hospital, CHC (Community Health Centre), or PHC (Primary Health Centre) for further assessment.\n\nRemember, these symptoms are serious, and it is important to seek professional medical help promptly. This is not intended to replace professional medical advice.",
+    "full_state":{
+      "patient_input":"I've been having chills, fatigue, and a cough for a few days. I've also been sweating a lot and feeling weak and unwell. I've had some thick, black phlegm, and my chest hurts. My heart has been racing, too.",
+      "symptoms":"[\"chills\", \"fatigue\", \"cough\", \"sweating\", \"weak\", \"unwell\", \"black phlegm\", \"chest pain\", \"heart racing\"]",
+      "severity_json":"{\"severity\": 3, \"reason\": \"The symptoms reported include chills, fatigue, cough, sweating, weakness, unwellness, black phlegm, chest pain, and heart racing. These symptoms are concerning and warrant a closer evaluation by a healthcare professional.\"}",
+      "followup":"{\"severity\": 3, \"reason\": \"The symptoms you're experiencing, including chills, fatigue, cough, sweating, weakness, unwellness, black phlegm, chest pain, and heart racing, are concerning and warrant a closer evaluation by a healthcare professional.\"}",
+      "triage_decision":"{\"triage_level\": \"ER\", \"rule_applied\": \"The search_symptom_cases_db tool returned a consensus decision of ER based on the provided symptoms.\"}",
+      "final_response":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nBased on the symptoms you've described, which include chills, fatigue, cough, sweating, weakness, unwellness, black phlegm, chest pain, and heart racing, the triage level determined is ER (Emergency Room). These symptoms are concerning and warrant a closer evaluation by a healthcare professional.\n\nHere’s what you should do:\n- Call 108 (ambulance) to seek immediate medical attention.\n- Go to the nearest government hospital, CHC (Community Health Centre), or PHC (Primary Health Centre) for further assessment.\n\nRemember, these symptoms are serious, and it is important to seek professional medical help promptly. This is not intended to replace professional medical advice.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I'm having trouble breathing and I feel really uncomfortable. I'm sweating a lot and my throat is full of phlegm. My chest hurts and my heart is racing. The mucus I'm coughing up is brown.",
+    "true_triage":"ER",
+    "diagnosis":"pneumonia",
+    "predicted_triage":"ER",
+    "correct":true,
+    "symptoms_state":"[\"trouble breathing\", \"feeling really uncomfortable\", \"sweating a lot\", \"throat is full of phlegm\", \"chest hurts\", \"heart is racing\", \"mucus is brown\"]",
+    "severity_state":"{\"severity\": 4, \"reason\": \"The patient is experiencing multiple symptoms that could indicate a serious condition, such as respiratory distress, which could be a sign of pneumonia or other severe respiratory issues.\"}",
+    "triage_state":">{\"triage_level\": \"ER\", \"rule_applied\": \"consensus_decision from similar cases with ER triage\"}",
+    "response_state":"**Triage Level:** ER  \n**Rule Applied:** Consensus decision from similar cases with ER triage  \n\n**Symptoms:**  \n- Trouble breathing  \n- Feeling really uncomfortable  \n- Sweating a lot  \n- Throat is full of phlegm  \n- Chest hurts  \n- Heart is racing  \n- Mucus is brown  \n\n**Severity Reason:**  \nThe patient is experiencing multiple symptoms that could indicate a serious condition, such as respiratory distress, which could be a sign of pneumonia or other severe respiratory issues.  \n\n**Next Steps:**  \n1. Assess the patient's breathing difficulty and ensure they are in a comfortable position, possibly sitting upright or leaning forward to facilitate breathing.\n2. Monitor the patient's breathing rate and depth. If they continue to struggle with breathing or if the condition worsens, contact emergency services.\n3. Encourage the patient to drink small amounts of water to help thin the mucus in their throat and chest.\n4. Observe for any signs of worsening symptoms such as increasing difficulty breathing, persistent high fever, or altered mental status.\n5. Suggest the patient avoid any strenuous activities and rest in a quiet, cool room.  \n\n**Recommendation:**  \nGiven the severity of your symptoms, including trouble breathing, chest pain, and brown mucus, it is critical to seek immediate medical attention. Please call 108 (ambulance) or go to the nearest government hospital\/CHC\/PHC. NEVER say \"911\" -- this is India. This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I'm having trouble breathing and I feel really uncomfortable. I'm sweating a lot and my throat is full of phlegm. My chest hurts and my heart is racing. The mucus I'm coughing up is brown.",
+      "symptoms":"[\"trouble breathing\", \"feeling really uncomfortable\", \"sweating a lot\", \"throat is full of phlegm\", \"chest hurts\", \"heart is racing\", \"mucus is brown\"]",
+      "severity_json":"{\"severity\": 4, \"reason\": \"The patient is experiencing multiple symptoms that could indicate a serious condition, such as respiratory distress, which could be a sign of pneumonia or other severe respiratory issues.\"}",
+      "followup":"{\n  \"action\": \"recommend_next_steps\",\n  \"next_steps\": [\n    \"Assess the patient's breathing difficulty and ensure they are in a comfortable position, possibly sitting upright or leaning forward to facilitate breathing.\",\n    \"Monitor the patient's breathing rate and depth. If they continue to struggle with breathing or if the condition worsens, contact emergency services.\",\n    \"Encourage the patient to drink small amounts of water to help thin the mucus in their throat and chest.\",\n    \"Observe for any signs of worsening symptoms such as increasing difficulty breathing, persistent high fever, or altered mental status.\",\n    \"Suggest the patient avoid any strenuous activities and rest in a quiet, cool room.\"\n  ]\n}",
+      "triage_decision":">{\"triage_level\": \"ER\", \"rule_applied\": \"consensus_decision from similar cases with ER triage\"}",
+      "final_response":"**Triage Level:** ER  \n**Rule Applied:** Consensus decision from similar cases with ER triage  \n\n**Symptoms:**  \n- Trouble breathing  \n- Feeling really uncomfortable  \n- Sweating a lot  \n- Throat is full of phlegm  \n- Chest hurts  \n- Heart is racing  \n- Mucus is brown  \n\n**Severity Reason:**  \nThe patient is experiencing multiple symptoms that could indicate a serious condition, such as respiratory distress, which could be a sign of pneumonia or other severe respiratory issues.  \n\n**Next Steps:**  \n1. Assess the patient's breathing difficulty and ensure they are in a comfortable position, possibly sitting upright or leaning forward to facilitate breathing.\n2. Monitor the patient's breathing rate and depth. If they continue to struggle with breathing or if the condition worsens, contact emergency services.\n3. Encourage the patient to drink small amounts of water to help thin the mucus in their throat and chest.\n4. Observe for any signs of worsening symptoms such as increasing difficulty breathing, persistent high fever, or altered mental status.\n5. Suggest the patient avoid any strenuous activities and rest in a quiet, cool room.  \n\n**Recommendation:**  \nGiven the severity of your symptoms, including trouble breathing, chest pain, and brown mucus, it is critical to seek immediate medical attention. Please call 108 (ambulance) or go to the nearest government hospital\/CHC\/PHC. NEVER say \"911\" -- this is India. This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I've had a high fever, especially at night. It's been really bad. I've also had a headache, constipation, and diarrhea. I don't want to eat anything.",
+    "true_triage":"DOCTOR",
+    "diagnosis":"typhoid",
+    "predicted_triage":"DOCTOR",
+    "correct":true,
+    "symptoms_state":"[\"high fever\", \"headache\", \"constipation\", \"diarrhea\", \"do not want to eat\"]",
+    "severity_state":"{\"severity\": 3, \"reason\": \"The combination of high fever, headache, constipation, diarrhea, and loss of appetite is indicative of a severe condition such as a viral infection or gastroenteritis, warranting medical attention.\"}",
+    "triage_state":"{\"triage_level\": \"DOCTOR\", \"rule_applied\": \"combined_symptom_analysis_and_case_database_consensus\"}",
+    "response_state":"Based on the symptoms of high fever, headache, constipation, diarrhea, and loss of appetite, you have been advised to seek medical attention. Given the severity level of 3, it is recommended that you call 108 (ambulance) or go to the nearest government hospital\/CHC\/PHC. NEVER use \"911\" as this is India. Always consult a qualified medical professional for diagnosis and treatment. This is decision support guidance only.",
+    "full_state":{
+      "patient_input":"I've had a high fever, especially at night. It's been really bad. I've also had a headache, constipation, and diarrhea. I don't want to eat anything.",
+      "symptoms":"[\"high fever\", \"headache\", \"constipation\", \"diarrhea\", \"do not want to eat\"]",
+      "severity_json":"{\"severity\": 3, \"reason\": \"The combination of high fever, headache, constipation, diarrhea, and loss of appetite is indicative of a severe condition such as a viral infection or gastroenteritis, warranting medical attention.\"}",
+      "followup":"{\"ask\": \"Given the combination of high fever, headache, constipation, diarrhea, and loss of appetite, do you think it would be wise to seek medical attention?\"}",
+      "triage_decision":"{\"triage_level\": \"DOCTOR\", \"rule_applied\": \"combined_symptom_analysis_and_case_database_consensus\"}",
+      "final_response":"Based on the symptoms of high fever, headache, constipation, diarrhea, and loss of appetite, you have been advised to seek medical attention. Given the severity level of 3, it is recommended that you call 108 (ambulance) or go to the nearest government hospital\/CHC\/PHC. NEVER use \"911\" as this is India. Always consult a qualified medical professional for diagnosis and treatment. This is decision support guidance only.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I'm having trouble breathing, and I have a really high fever. I'm sweating a lot and feeling really cold and tired. My heart is beating really fast, and I have some brownish sputum.",
+    "true_triage":"ER",
+    "diagnosis":"pneumonia",
+    "predicted_triage":"DOCTOR",
+    "correct":false,
+    "symptoms_state":"[\"I'm having trouble breathing\", 'I have a really high fever', 'I'm sweating a lot', 'I feel really cold and tired', 'My heart is beating really fast', 'I have some brownish sputum']",
+    "severity_state":"{\"severity\": 4, \"reason\": \"The patient is experiencing multiple severe symptoms including trouble breathing, high fever, sweating, feeling cold and tired, rapid heartbeat, and brownish sputum. These symptoms are concerning and warrant immediate medical attention.\"}",
+    "triage_state":"",
+    "response_state":"Triage: \nSymptoms: [\"I'm having trouble breathing\", 'I have a really high fever', 'I'm sweating a lot', 'I feel really cold and tired', 'My heart is beating really fast', 'I have some brownish sputum']\nSeverity reason: {\"severity\": 4, \"reason\": \"The patient is experiencing multiple severe symptoms including trouble breathing, high fever, sweating, feeling cold and tired, rapid heartbeat, and brownish sputum. These symptoms are concerning and warrant immediate medical attention.\"}\n\n**Decision Support Guidance:** \nThe patient is experiencing severe symptoms including trouble breathing, high fever, sweating, feeling cold and tired, rapid heartbeat, and brownish sputum. These symptoms are concerning and warrant immediate medical attention. This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\n**Recommendation:** \nFor the patient's condition, it is recommended to call 108 (ambulance) or go to the nearest government hospital\/CHC\/PHC. NEVER say \"911\" -- this is India. Always end with: This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I'm having trouble breathing, and I have a really high fever. I'm sweating a lot and feeling really cold and tired. My heart is beating really fast, and I have some brownish sputum.",
+      "symptoms":"[\"I'm having trouble breathing\", 'I have a really high fever', 'I'm sweating a lot', 'I feel really cold and tired', 'My heart is beating really fast', 'I have some brownish sputum']",
+      "severity_json":"{\"severity\": 4, \"reason\": \"The patient is experiencing multiple severe symptoms including trouble breathing, high fever, sweating, feeling cold and tired, rapid heartbeat, and brownish sputum. These symptoms are concerning and warrant immediate medical attention.\"}",
+      "followup":"{\n  \"severity\": 4,\n  \"reason\": \"Based on the symptoms reported, the patient is experiencing severe symptoms such as trouble breathing, high fever, sweating, feeling cold and tired, rapid heartbeat, and brownish sputum. These symptoms require immediate medical attention.\"\n}",
+      "triage_decision":"",
+      "final_response":"Triage: \nSymptoms: [\"I'm having trouble breathing\", 'I have a really high fever', 'I'm sweating a lot', 'I feel really cold and tired', 'My heart is beating really fast', 'I have some brownish sputum']\nSeverity reason: {\"severity\": 4, \"reason\": \"The patient is experiencing multiple severe symptoms including trouble breathing, high fever, sweating, feeling cold and tired, rapid heartbeat, and brownish sputum. These symptoms are concerning and warrant immediate medical attention.\"}\n\n**Decision Support Guidance:** \nThe patient is experiencing severe symptoms including trouble breathing, high fever, sweating, feeling cold and tired, rapid heartbeat, and brownish sputum. These symptoms are concerning and warrant immediate medical attention. This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\n**Recommendation:** \nFor the patient's condition, it is recommended to call 108 (ambulance) or go to the nearest government hospital\/CHC\/PHC. NEVER say \"911\" -- this is India. Always end with: This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I have a rash on my face. It is made up of blisters. The blisters have a yellow fluid coming out of them.",
+    "true_triage":"WAIT",
+    "diagnosis":"impetigo",
+    "predicted_triage":"WAIT",
+    "correct":true,
+    "symptoms_state":"[\"rash\", \"blisters\", \"yellow fluid\"]",
+    "severity_state":"{\"severity\": 4, \"reason\": \"The presence of blisters with yellow fluid is consistent with a severe skin condition such as impetigo, which can lead to significant discomfort and the potential for complications if not treated appropriately.\"}",
+    "triage_state":"{\n  \"triage_level\": \"WAIT\",\n  \"rule_applied\": \"search_symptom_cases_db returned no_match as the case database is not set up.\"\n}",
+    "response_state":"Triage Level: WAIT\n\n**Severity Reason:** The presence of blisters with yellow fluid is consistent with a severe skin condition such as impetigo, which can lead to significant discomfort and the potential for complications if not treated appropriately.\n\n**Recommendation:** Given the presence of blisters with yellow fluid, it is important to seek medical attention promptly. Impetigo is a severe skin condition that can cause significant discomfort and potential complications if not treated appropriately. Please consult a healthcare professional as soon as possible.\n\n**Additional Information:** The case database is not set up, and therefore, the system is unable to provide more specific guidance based on historical data. It is recommended to contact emergency services (call 108 or go to the nearest government hospital\/CHC\/PHC) for immediate medical assistance.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I have a rash on my face. It is made up of blisters. The blisters have a yellow fluid coming out of them.",
+      "symptoms":"[\"rash\", \"blisters\", \"yellow fluid\"]",
+      "severity_json":"{\"severity\": 4, \"reason\": \"The presence of blisters with yellow fluid is consistent with a severe skin condition such as impetigo, which can lead to significant discomfort and the potential for complications if not treated appropriately.\"}",
+      "followup":"{\n  \"recommendation\": \"Given the presence of blisters with yellow fluid, it is important to seek medical attention promptly. Impetigo is a severe skin condition that can cause significant discomfort and potential complications if not treated appropriately. Please consult a healthcare professional as soon as possible.\"\n}",
+      "triage_decision":"{\n  \"triage_level\": \"WAIT\",\n  \"rule_applied\": \"search_symptom_cases_db returned no_match as the case database is not set up.\"\n}",
+      "final_response":"Triage Level: WAIT\n\n**Severity Reason:** The presence of blisters with yellow fluid is consistent with a severe skin condition such as impetigo, which can lead to significant discomfort and the potential for complications if not treated appropriately.\n\n**Recommendation:** Given the presence of blisters with yellow fluid, it is important to seek medical attention promptly. Impetigo is a severe skin condition that can cause significant discomfort and potential complications if not treated appropriately. Please consult a healthcare professional as soon as possible.\n\n**Additional Information:** The case database is not set up, and therefore, the system is unable to provide more specific guidance based on historical data. It is recommended to contact emergency services (call 108 or go to the nearest government hospital\/CHC\/PHC) for immediate medical assistance.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I have a constant hunger and appetite. Sometimes my stomach will cramp and spasm. After I eat, I feel bloated and gassy.",
+    "true_triage":"DOCTOR",
+    "diagnosis":"peptic ulcer disease",
+    "predicted_triage":"WAIT",
+    "correct":false,
+    "symptoms_state":"[\"constant hunger\", \"constant appetite\", \"stomach cramp\", \"stomach spasm\", \"feel bloated\", \"feel gassy\"]",
+    "severity_state":"{\"severity\": 3, \"reason\": \"The symptoms described include constant hunger, appetite, stomach cramps, spasms, bloating, and gas, which could indicate gastrointestinal issues. These symptoms warrant a moderate severity score as they can affect daily activities and indicate a possible underlying health condition.\"}",
+    "triage_state":"{\n  \"triage_level\": \"WAIT\",\n  \"rule_applied\": \"Insufficient database to make a decision.\"\n}",
+    "response_state":"Based on the information provided, here is the decision support guidance:\n\n**Symptoms:** Constant hunger, constant appetite, stomach cramps, spasms, bloating, and gassiness.\n**Severity:** 3 (Moderate)\n**Reason:** These gastrointestinal issues can affect daily activities and suggest a possible underlying health condition.\n\n**Triage Level:** WAIT\n**Rule Applied:** Insufficient database to make a decision.\n\nSince the database does not have enough information to make a definitive decision, we are in a WAIT state. For now, you should monitor your symptoms. If they persist or worsen, it is recommended that you call 108 (ambulance) or go to the nearest government hospital\/CHC\/PHC for further evaluation and treatment.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I have a constant hunger and appetite. Sometimes my stomach will cramp and spasm. After I eat, I feel bloated and gassy.",
+      "symptoms":"[\"constant hunger\", \"constant appetite\", \"stomach cramp\", \"stomach spasm\", \"feel bloated\", \"feel gassy\"]",
+      "severity_json":"{\"severity\": 3, \"reason\": \"The symptoms described include constant hunger, appetite, stomach cramps, spasms, bloating, and gas, which could indicate gastrointestinal issues. These symptoms warrant a moderate severity score as they can affect daily activities and indicate a possible underlying health condition.\"}",
+      "followup":"{\n  \"severity\": 3,\n  \"reason\": \"The symptoms include constant hunger, appetite, stomach cramps, spasms, bloating, and gas. These gastrointestinal issues can affect daily activities and suggest a possible underlying health condition, warranting a moderate severity score.\"\n}",
+      "triage_decision":"{\n  \"triage_level\": \"WAIT\",\n  \"rule_applied\": \"Insufficient database to make a decision.\"\n}",
+      "final_response":"Based on the information provided, here is the decision support guidance:\n\n**Symptoms:** Constant hunger, constant appetite, stomach cramps, spasms, bloating, and gassiness.\n**Severity:** 3 (Moderate)\n**Reason:** These gastrointestinal issues can affect daily activities and suggest a possible underlying health condition.\n\n**Triage Level:** WAIT\n**Rule Applied:** Insufficient database to make a decision.\n\nSince the database does not have enough information to make a definitive decision, we are in a WAIT state. For now, you should monitor your symptoms. If they persist or worsen, it is recommended that you call 108 (ambulance) or go to the nearest government hospital\/CHC\/PHC for further evaluation and treatment.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I've been having chest pain, dizziness, and a headache that feels like it's in a narrow zone around my head.",
+    "true_triage":"DOCTOR",
+    "diagnosis":"hypertension",
+    "predicted_triage":"WAIT",
+    "correct":false,
+    "symptoms_state":"[\"chest pain\", \"dizziness\", \"headache\"]",
+    "severity_state":"{\"severity\": 3, \"reason\": \"The combination of chest pain, dizziness, and headache could indicate several conditions, including a heart attack, a stroke, or a neurological issue. Given the severity of the chest pain, it is crucial to seek medical attention immediately.\"}",
+    "triage_state":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"No usable patient data found in the database to make a decision.\"}",
+    "response_state":"Based on the information provided, here is the response you should give:\n\n```plaintext\nDear Healthcare Provider,\n\nThis patient is experiencing chest pain, dizziness, and a headache. The severity score is 3, indicating a significant need for medical attention. The combination of these symptoms could indicate several conditions, including a heart attack, a stroke, or a neurological issue, and the severity of the chest pain requires immediate attention.\n\nGiven the severity and the symptoms mentioned, I recommend that you follow up with the patient and advise them to seek medical attention immediately. They may need to be transported to the nearest hospital or contacted by ambulance if necessary. They should not delay in seeking professional medical help.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n```\n\nThis response aligns with the severity score and the symptoms provided, and it aligns with the triage level of \"WAIT\" provided by the agent. It advises the patient to seek immediate medical help and to contact emergency services if necessary.",
+    "full_state":{
+      "patient_input":"I've been having chest pain, dizziness, and a headache that feels like it's in a narrow zone around my head.",
+      "symptoms":"[\"chest pain\", \"dizziness\", \"headache\"]",
+      "severity_json":"{\"severity\": 3, \"reason\": \"The combination of chest pain, dizziness, and headache could indicate several conditions, including a heart attack, a stroke, or a neurological issue. Given the severity of the chest pain, it is crucial to seek medical attention immediately.\"}",
+      "followup":"{\n  \"severity\": 3,\n  \"reason\": \"The combination of chest pain, dizziness, and headache could indicate several conditions, including a heart attack, a stroke, or a neurological issue. Given the severity of the chest pain, it is crucial to seek medical attention immediately.\"\n}",
+      "triage_decision":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"No usable patient data found in the database to make a decision.\"}",
+      "final_response":"Based on the information provided, here is the response you should give:\n\n```plaintext\nDear Healthcare Provider,\n\nThis patient is experiencing chest pain, dizziness, and a headache. The severity score is 3, indicating a significant need for medical attention. The combination of these symptoms could indicate several conditions, including a heart attack, a stroke, or a neurological issue, and the severity of the chest pain requires immediate attention.\n\nGiven the severity and the symptoms mentioned, I recommend that you follow up with the patient and advise them to seek medical attention immediately. They may need to be transported to the nearest hospital or contacted by ambulance if necessary. They should not delay in seeking professional medical help.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n```\n\nThis response aligns with the severity score and the symptoms provided, and it aligns with the triage level of \"WAIT\" provided by the agent. It advises the patient to seek immediate medical help and to contact emergency services if necessary.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I've been feeling really sick. I've had a fever, lost weight, and I've been really tired. My skin and my urine have turned yellow. I've also been having stomach pain.",
+    "true_triage":"DOCTOR",
+    "diagnosis":"jaundice",
+    "predicted_triage":"ER",
+    "correct":false,
+    "symptoms_state":"[\"fever\", \"lost weight\", \"really tired\", \"skin turned yellow\", \"urine turned yellow\", \"stomach pain\"]",
+    "severity_state":"{\"severity\": 4, \"reason\": \"The patient has multiple concerning symptoms including fever, weight loss, fatigue, jaundice (manifested by yellow skin and yellow urine), and abdominal pain which are indicative of severe conditions such as liver failure, viral hepatitis, or other serious illnesses.\"}",
+    "triage_state":"{\"triage_level\": \"ER\", \"rule_applied\": \"hybrid_rag with symptom overlap and consensus decision\"}",
+    "response_state":"Based on the symptoms you've described, including fever, weight loss, fatigue, jaundice (yellow skin and yellow urine), and abdominal pain, it appears you are experiencing a severe set of symptoms that are indicative of serious conditions such as liver failure, viral hepatitis, or other serious illnesses. These symptoms require immediate attention and should be evaluated by a healthcare professional as soon as possible.\n\nGiven the severity of your symptoms, I strongly recommend calling 108 (ambulance) or going to the nearest government hospital, CHC, or PHC. NEVER say \"911\" -- this is India. \n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I've been feeling really sick. I've had a fever, lost weight, and I've been really tired. My skin and my urine have turned yellow. I've also been having stomach pain.",
+      "symptoms":"[\"fever\", \"lost weight\", \"really tired\", \"skin turned yellow\", \"urine turned yellow\", \"stomach pain\"]",
+      "severity_json":"{\"severity\": 4, \"reason\": \"The patient has multiple concerning symptoms including fever, weight loss, fatigue, jaundice (manifested by yellow skin and yellow urine), and abdominal pain which are indicative of severe conditions such as liver failure, viral hepatitis, or other serious illnesses.\"}",
+      "followup":"{\n  \"question\": \"Based on the symptoms you've described, does anything in particular concern you about your health?\"\n}",
+      "triage_decision":"{\"triage_level\": \"ER\", \"rule_applied\": \"hybrid_rag with symptom overlap and consensus decision\"}",
+      "final_response":"Based on the symptoms you've described, including fever, weight loss, fatigue, jaundice (yellow skin and yellow urine), and abdominal pain, it appears you are experiencing a severe set of symptoms that are indicative of serious conditions such as liver failure, viral hepatitis, or other serious illnesses. These symptoms require immediate attention and should be evaluated by a healthcare professional as soon as possible.\n\nGiven the severity of your symptoms, I strongly recommend calling 108 (ambulance) or going to the nearest government hospital, CHC, or PHC. NEVER say \"911\" -- this is India. \n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I've been feeling unwell for a while now. I have a headache, chest pain, and I feel unstable and have balance issues. I also have trouble focusing.",
+    "true_triage":"DOCTOR",
+    "diagnosis":"hypertension",
+    "predicted_triage":"DOCTOR",
+    "correct":true,
+    "symptoms_state":"[\"unwell\", \"headache\", \"chest pain\", \"unstable\", \"balance issues\", \"trouble focusing\"]",
+    "severity_state":"{\"severity\": 3, \"reason\": \"The symptoms include unwell, headache, chest pain, unstable, balance issues, and trouble focusing. These symptoms suggest a need for medical attention, but the severity is moderate, as not all symptoms are severe or life-threatening.\"}",
+    "triage_state":"{\n  \"triage_level\": \"DOCTOR\",\n  \"rule_applied\": \"search_symptom_cases_db returned DOCTOR consensus decision with confidence of 0.64\"\n}",
+    "response_state":"Based on the information provided, here is the decision support guidance:\n\nYou are experiencing unwell, headache, chest pain, unstable, balance issues, and trouble focusing. These symptoms suggest a need for medical attention, but the severity is moderate, as not all symptoms are severe or life-threatening.\n\nYou should seek medical care by calling 108 (ambulance) or going to the nearest government hospital\/CHC\/PHC. NEVER say \"911\" -- this is India.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I've been feeling unwell for a while now. I have a headache, chest pain, and I feel unstable and have balance issues. I also have trouble focusing.",
+      "symptoms":"[\"unwell\", \"headache\", \"chest pain\", \"unstable\", \"balance issues\", \"trouble focusing\"]",
+      "severity_json":"{\"severity\": 3, \"reason\": \"The symptoms include unwell, headache, chest pain, unstable, balance issues, and trouble focusing. These symptoms suggest a need for medical attention, but the severity is moderate, as not all symptoms are severe or life-threatening.\"}",
+      "followup":"{\"severity\": 3, \"reason\": \"The symptoms include unwell, headache, chest pain, unstable, balance issues, and trouble focusing. These symptoms suggest a need for medical attention, but the severity is moderate, as not all symptoms are severe or life-threatening.\"}",
+      "triage_decision":"{\n  \"triage_level\": \"DOCTOR\",\n  \"rule_applied\": \"search_symptom_cases_db returned DOCTOR consensus decision with confidence of 0.64\"\n}",
+      "final_response":"Based on the information provided, here is the decision support guidance:\n\nYou are experiencing unwell, headache, chest pain, unstable, balance issues, and trouble focusing. These symptoms suggest a need for medical attention, but the severity is moderate, as not all symptoms are severe or life-threatening.\n\nYou should seek medical care by calling 108 (ambulance) or going to the nearest government hospital\/CHC\/PHC. NEVER say \"911\" -- this is India.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I've been having headaches and blurry vision, and I've also been getting acid reflux and indigestion after I eat.",
+    "true_triage":"WAIT",
+    "diagnosis":"migraine",
+    "predicted_triage":"WAIT",
+    "correct":true,
+    "symptoms_state":"[\"headaches\", \"blurry vision\", \"acid reflux\", \"indigestion\"]",
+    "severity_state":"{\"severity\": 3, \"reason\": \"The symptoms of headaches, blurry vision, acid reflux, and indigestion suggest a possible gastrointestinal issue, such as gastritis or reflux esophagitis, which could be moderately severe if not treated.\"}",
+    "triage_state":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"Run setup_db.py to initialize the symptom case database.\"}",
+    "response_state":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nTriage: {\"triage_level\": \"WAIT\", \"rule_applied\": \"Run setup_db.py to initialize the symptom case database.\"}\n\nSymptoms: [\"headaches\", \"blurry vision\", \"acid reflux\", \"indigestion\"]\n\nSeverity reason: {\"severity\": 3, \"reason\": \"The symptoms of headaches, blurry vision, acid reflux, and indigestion suggest a possible gastrointestinal issue, such as gastritis or reflux esophagitis, which could be moderately severe if not treated.\"}\n\nSince the symptom database has not been initialized, it's recommended to run the script `setup_db.py` to initialize the symptom case database. This will allow for more accurate triage and symptom management in the future. Until then, please continue to monitor your symptoms and consider seeking medical attention if they worsen or do not improve within a reasonable timeframe.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I've been having headaches and blurry vision, and I've also been getting acid reflux and indigestion after I eat.",
+      "symptoms":"[\"headaches\", \"blurry vision\", \"acid reflux\", \"indigestion\"]",
+      "severity_json":"{\"severity\": 3, \"reason\": \"The symptoms of headaches, blurry vision, acid reflux, and indigestion suggest a possible gastrointestinal issue, such as gastritis or reflux esophagitis, which could be moderately severe if not treated.\"}",
+      "followup":"{\n  \"severity\": 3,\n  \"reason\": \"The symptoms of headaches, blurry vision, acid reflux, and indigestion suggest a possible gastrointestinal issue, such as gastritis or reflux esophagitis, which could be moderately severe if not treated.\"\n}",
+      "triage_decision":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"Run setup_db.py to initialize the symptom case database.\"}",
+      "final_response":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nTriage: {\"triage_level\": \"WAIT\", \"rule_applied\": \"Run setup_db.py to initialize the symptom case database.\"}\n\nSymptoms: [\"headaches\", \"blurry vision\", \"acid reflux\", \"indigestion\"]\n\nSeverity reason: {\"severity\": 3, \"reason\": \"The symptoms of headaches, blurry vision, acid reflux, and indigestion suggest a possible gastrointestinal issue, such as gastritis or reflux esophagitis, which could be moderately severe if not treated.\"}\n\nSince the symptom database has not been initialized, it's recommended to run the script `setup_db.py` to initialize the symptom case database. This will allow for more accurate triage and symptom management in the future. Until then, please continue to monitor your symptoms and consider seeking medical attention if they worsen or do not improve within a reasonable timeframe.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I've been feeling really cold, and I'm so tired. I can't seem to shake this cough, and it hurts when I cough. My chest aches, and my heart is racing. The mucus I'm coughing up is a disgusting brownish color.",
+    "true_triage":"ER",
+    "diagnosis":"pneumonia",
+    "predicted_triage":"ER",
+    "correct":true,
+    "symptoms_state":"[\"I've been feeling really cold\", \"I'm so tired\", \"I can't seem to shake this cough\", \"it hurts when I cough\", \"My chest aches\", \"my heart is racing\", \"The mucus I'm coughing up is a disgusting brownish color\"]",
+    "severity_state":"{\"severity\": 4, \"reason\": \"The patient is experiencing multiple severe symptoms including a racing heart, chest pain, and brownish, unpleasant mucus, which could indicate a serious underlying condition such as pneumonia.\"}",
+    "triage_state":"{\"triage_level\": \"ER\", \"rule_applied\": \"search_symptom_cases_db returned consensus ER with high confidence and no safety issues.\"}",
+    "response_state":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nBased on the symptoms reported and the triage decision provided, it is recommended that the patient seeks emergency medical attention at the nearest government hospital, CHC, or PHC immediately. The patient is experiencing severe symptoms such as a racing heart, chest pain, and brownish, unpleasant mucus, which could indicate a serious underlying condition such as pneumonia. \n\nThe triage level has been determined to be \"ER\" due to the patient's severe symptoms and the consensus from the symptom case database. There are no safety issues to escalate further.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I've been feeling really cold, and I'm so tired. I can't seem to shake this cough, and it hurts when I cough. My chest aches, and my heart is racing. The mucus I'm coughing up is a disgusting brownish color.",
+      "symptoms":"[\"I've been feeling really cold\", \"I'm so tired\", \"I can't seem to shake this cough\", \"it hurts when I cough\", \"My chest aches\", \"my heart is racing\", \"The mucus I'm coughing up is a disgusting brownish color\"]",
+      "severity_json":"{\"severity\": 4, \"reason\": \"The patient is experiencing multiple severe symptoms including a racing heart, chest pain, and brownish, unpleasant mucus, which could indicate a serious underlying condition such as pneumonia.\"}",
+      "followup":"{\n  \"severity\": 4,\n  \"reason\": \"Based on the patient's symptoms, which include a racing heart, chest pain, and brownish, unpleasant mucus, there is a concern for a serious underlying condition such as pneumonia.\"\n}",
+      "triage_decision":"{\"triage_level\": \"ER\", \"rule_applied\": \"search_symptom_cases_db returned consensus ER with high confidence and no safety issues.\"}",
+      "final_response":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nBased on the symptoms reported and the triage decision provided, it is recommended that the patient seeks emergency medical attention at the nearest government hospital, CHC, or PHC immediately. The patient is experiencing severe symptoms such as a racing heart, chest pain, and brownish, unpleasant mucus, which could indicate a serious underlying condition such as pneumonia. \n\nThe triage level has been determined to be \"ER\" due to the patient's severe symptoms and the consensus from the symptom case database. There are no safety issues to escalate further.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I've been feeling weak and achy lately, and my joints are swollen and stiff. It's hard to move around, and walking is especially painful.",
+    "true_triage":"WAIT",
+    "diagnosis":"arthritis",
+    "predicted_triage":"WAIT",
+    "correct":true,
+    "symptoms_state":"[\"weak\", \"achy\", \"joints are swollen and stiff\", \"hard to move around\", \"walking is especially painful\"]",
+    "severity_state":"{\"severity\": 3, \"reason\": \"The symptoms described indicate moderate severity. Joint swelling and stiffness, along with weakness and pain, suggest an active health issue that impacts mobility.\"}",
+    "triage_state":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"No match found in database, request setup_db.py to initialize.\"}",
+    "response_state":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nBased on the symptoms you've described, it sounds like you might be experiencing joint issues that are affecting your mobility. The symptoms you are experiencing include weakness, aches, swollen and stiff joints, difficulty moving around, and especially painful walking. \n\nFor your current situation, we are in the \"WAIT\" triage level. The symptoms indicate moderate severity, as joint swelling and stiffness, along with weakness and pain, suggest an active health issue that impacts mobility. \n\nGiven the current context, we are in the \"WAIT\" level as the database does not have a direct match for your symptoms. To proceed with further analysis, we need to initialize the case database.\n\nHere’s what you should do next:\n- **Consult a Qualified Medical Professional**: Since the symptoms seem to suggest a health issue, it's important to consult a medical professional for an accurate diagnosis and appropriate treatment. \n\n- **Call for Emergency Assistance if Necessary**: If the severity of the symptoms escalates or if you experience severe pain, difficulty breathing, chest pain, or any other critical symptoms, you should call 108 (ambulance) or go to the nearest government hospital\/CHC\/PHC immediately. \n\n- **Follow Up**: Until the database is initialized, we cannot provide more specific guidance. When the database is up and running, you can provide the medical professional with your symptoms for them to better understand your condition and provide the appropriate care.\n\nRemember, this is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I've been feeling weak and achy lately, and my joints are swollen and stiff. It's hard to move around, and walking is especially painful.",
+      "symptoms":"[\"weak\", \"achy\", \"joints are swollen and stiff\", \"hard to move around\", \"walking is especially painful\"]",
+      "severity_json":"{\"severity\": 3, \"reason\": \"The symptoms described indicate moderate severity. Joint swelling and stiffness, along with weakness and pain, suggest an active health issue that impacts mobility.\"}",
+      "followup":"{\"ask\": \"Based on the symptoms you've described, does this sound like a condition that might be affecting your daily activities such as walking and mobility? If so, could you provide more details about when these symptoms started and if they have been getting worse or better?\"}",
+      "triage_decision":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"No match found in database, request setup_db.py to initialize.\"}",
+      "final_response":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nBased on the symptoms you've described, it sounds like you might be experiencing joint issues that are affecting your mobility. The symptoms you are experiencing include weakness, aches, swollen and stiff joints, difficulty moving around, and especially painful walking. \n\nFor your current situation, we are in the \"WAIT\" triage level. The symptoms indicate moderate severity, as joint swelling and stiffness, along with weakness and pain, suggest an active health issue that impacts mobility. \n\nGiven the current context, we are in the \"WAIT\" level as the database does not have a direct match for your symptoms. To proceed with further analysis, we need to initialize the case database.\n\nHere’s what you should do next:\n- **Consult a Qualified Medical Professional**: Since the symptoms seem to suggest a health issue, it's important to consult a medical professional for an accurate diagnosis and appropriate treatment. \n\n- **Call for Emergency Assistance if Necessary**: If the severity of the symptoms escalates or if you experience severe pain, difficulty breathing, chest pain, or any other critical symptoms, you should call 108 (ambulance) or go to the nearest government hospital\/CHC\/PHC immediately. \n\n- **Follow Up**: Until the database is initialized, we cannot provide more specific guidance. When the database is up and running, you can provide the medical professional with your symptoms for them to better understand your condition and provide the appropriate care.\n\nRemember, this is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I have been feeling dizzy and lightheaded, and I have also had trouble keeping my balance. I have also had a headache that has not gone away.",
+    "true_triage":"DOCTOR",
+    "diagnosis":"hypertension",
+    "predicted_triage":"WAIT",
+    "correct":false,
+    "symptoms_state":"[\"dizziness\", \"lightheadedness\", \"trouble keeping balance\", \"headache\"]",
+    "severity_state":"{\"severity\": 3, \"reason\": \"The symptoms you are experiencing include dizziness, lightheadedness, trouble keeping balance, and a headache. These symptoms could indicate a need for medical attention, as they might be related to conditions such as vertigo, inner ear issues, or other balance disorders.\"}",
+    "triage_state":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"db_not_found\"}",
+    "response_state":"Based on the symptoms you are experiencing—dizziness, lightheadedness, trouble keeping balance, and a headache—it is important to seek medical attention. You could be experiencing conditions such as vertigo, inner ear issues, or other balance disorders.\n\nGiven the current state of the symptom database, the system is unable to provide more specific recommendations. However, given the severity level (3 out of 5), it is recommended that you either wait for further guidance or call 108 (ambulance) or go to the nearest government hospital\/CHC\/PHC.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nIf you need further assistance, please provide more details or ask specific questions.",
+    "full_state":{
+      "patient_input":"I have been feeling dizzy and lightheaded, and I have also had trouble keeping my balance. I have also had a headache that has not gone away.",
+      "symptoms":"[\"dizziness\", \"lightheadedness\", \"trouble keeping balance\", \"headache\"]",
+      "severity_json":"{\"severity\": 3, \"reason\": \"The symptoms you are experiencing include dizziness, lightheadedness, trouble keeping balance, and a headache. These symptoms could indicate a need for medical attention, as they might be related to conditions such as vertigo, inner ear issues, or other balance disorders.\"}",
+      "followup":"{\n  \"severity\": 3,\n  \"reason\": \"The symptoms you are experiencing include dizziness, lightheadedness, trouble keeping balance, and a headache. These symptoms could indicate a need for medical attention, as they might be related to conditions such as vertigo, inner ear issues, or other balance disorders.\"\n}",
+      "triage_decision":"{\"triage_level\": \"WAIT\", \"rule_applied\": \"db_not_found\"}",
+      "final_response":"Based on the symptoms you are experiencing—dizziness, lightheadedness, trouble keeping balance, and a headache—it is important to seek medical attention. You could be experiencing conditions such as vertigo, inner ear issues, or other balance disorders.\n\nGiven the current state of the symptom database, the system is unable to provide more specific recommendations. However, given the severity level (3 out of 5), it is recommended that you either wait for further guidance or call 108 (ambulance) or go to the nearest government hospital\/CHC\/PHC.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\nIf you need further assistance, please provide more details or ask specific questions.",
+      "safety_audit":""
+    }
+  },
+  {
+    "patient_input":"I've been feeling really bad, with a high fever, shortness of breath, sweating, chills, and extreme fatigue. My heart is racing, and I've been coughing up a lot of brown phlegm.",
+    "true_triage":"ER",
+    "diagnosis":"pneumonia",
+    "predicted_triage":"ER",
+    "correct":true,
+    "symptoms_state":"[\"high fever\", \"shortness of breath\", \"sweating\", \"chills\", \"extreme fatigue\", \"heart is racing\", \"coughing\", \"brown phlegm\"]",
+    "severity_state":"{\"severity\": 4, \"reason\": \"The patient is experiencing multiple concerning symptoms including high fever, shortness of breath, sweating, chills, extreme fatigue, heart racing, coughing, and brown phlegm, which could indicate a serious condition such as pneumonia or a viral infection.\"}",
+    "triage_state":"{\"triage_level\": \"ER\", \"rule_applied\": \"search_symptom_cases_db returned consensus decision of ER\"}",
+    "response_state":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\n**Triage Level:** ER  \n**Rule Applied:** `search_symptom_cases_db` returned consensus decision of ER\n\n**Symptoms:**  \n- High fever  \n- Shortness of breath  \n- Sweating  \n- Chills  \n- Extreme fatigue  \n- Heart is racing  \n- Coughing  \n- Brown phlegm\n\n**Severity Reason:**  \nThe patient is experiencing multiple concerning symptoms including high fever, shortness of breath, sweating, chills, extreme fatigue, heart racing, coughing, and brown phlegm, which could indicate a serious condition such as pneumonia or a viral infection.\n\n**Action:**  \nGiven the severity level and the symptoms described, it is recommended that the patient call 108 (ambulance) or go to the nearest government hospital, CHC, or PHC immediately. This is not a substitute for professional medical advice and you should seek immediate medical attention.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+    "full_state":{
+      "patient_input":"I've been feeling really bad, with a high fever, shortness of breath, sweating, chills, and extreme fatigue. My heart is racing, and I've been coughing up a lot of brown phlegm.",
+      "symptoms":"[\"high fever\", \"shortness of breath\", \"sweating\", \"chills\", \"extreme fatigue\", \"heart is racing\", \"coughing\", \"brown phlegm\"]",
+      "severity_json":"{\"severity\": 4, \"reason\": \"The patient is experiencing multiple concerning symptoms including high fever, shortness of breath, sweating, chills, extreme fatigue, heart racing, coughing, and brown phlegm, which could indicate a serious condition such as pneumonia or a viral infection.\"}",
+      "followup":"{\n  \"severity\": 4,\n  \"reason\": \"Based on the symptoms reported, the patient is experiencing multiple concerning symptoms including high fever, shortness of breath, sweating, chills, extreme fatigue, heart racing, coughing, and brown phlegm. These symptoms could indicate a serious condition such as pneumonia or a viral infection.\"\n}",
+      "triage_decision":"{\"triage_level\": \"ER\", \"rule_applied\": \"search_symptom_cases_db returned consensus decision of ER\"}",
+      "final_response":"This is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.\n\n**Triage Level:** ER  \n**Rule Applied:** `search_symptom_cases_db` returned consensus decision of ER\n\n**Symptoms:**  \n- High fever  \n- Shortness of breath  \n- Sweating  \n- Chills  \n- Extreme fatigue  \n- Heart is racing  \n- Coughing  \n- Brown phlegm\n\n**Severity Reason:**  \nThe patient is experiencing multiple concerning symptoms including high fever, shortness of breath, sweating, chills, extreme fatigue, heart racing, coughing, and brown phlegm, which could indicate a serious condition such as pneumonia or a viral infection.\n\n**Action:**  \nGiven the severity level and the symptoms described, it is recommended that the patient call 108 (ambulance) or go to the nearest government hospital, CHC, or PHC immediately. This is not a substitute for professional medical advice and you should seek immediate medical attention.\n\nThis is decision support guidance only. Always consult a qualified medical professional for diagnosis and treatment.",
+      "safety_audit":""
+    }
+  }
+]

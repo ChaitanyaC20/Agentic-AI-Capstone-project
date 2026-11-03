@@ -1,0 +1,30 @@
+# Sahayak Health AI Capstone - environment
+#
+# Install:
+#   pip install -r requirements.txt
+#
+# Notes:
+# - The notebooks use the public gretelai/symptom_to_diagnosis dataset.
+# - The local demo/eval path assumes Ollama is running with hermes3:8b.
+# - Gemini/Colab learners can use Google ADK with their own GOOGLE_API_KEY.
+
+google-adk>=2.0.0
+google-genai
+litellm
+
+datasets
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+requests
+
+fastapi
+uvicorn
+
+pytest
+ipykernel
+nbclient
+nbformat
+jupyter

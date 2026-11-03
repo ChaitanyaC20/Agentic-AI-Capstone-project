@@ -1,0 +1,52 @@
+{
+  "builder_name": "json",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "symptom_to_diagnosis",
+  "dataset_size": 181543,
+  "description": "",
+  "download_checksums": {
+    "hf://datasets/gretelai/symptom_to_diagnosis@722cfb0e11f8ae37339c7f573b5e10429b94df49/train.jsonl": {
+      "num_bytes": 170994,
+      "checksum": null
+    },
+    "hf://datasets/gretelai/symptom_to_diagnosis@722cfb0e11f8ae37339c7f573b5e10429b94df49/test.jsonl": {
+      "num_bytes": 42506,
+      "checksum": null
+    }
+  },
+  "download_size": 213500,
+  "features": {
+    "output_text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "input_text": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 395043,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 145401,
+      "num_examples": 853,
+      "dataset_name": "symptom_to_diagnosis"
+    },
+    "test": {
+      "name": "test",
+      "num_bytes": 36142,
+      "num_examples": 212,
+      "dataset_name": "symptom_to_diagnosis"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

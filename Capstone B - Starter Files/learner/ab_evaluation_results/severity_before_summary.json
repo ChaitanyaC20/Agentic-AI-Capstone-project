@@ -1,0 +1,40 @@
+{
+  "prompt_version": "original",
+  "total_cases": 50,
+  "valid_predictions": 49,
+  "failed_predictions": 1,
+  "accuracy_valid_cases": 0.3673469387755102,
+  "classification_report": {
+    "WAIT": {
+      "precision": 0.25925925925925924,
+      "recall": 0.4117647058823529,
+      "f1-score": 0.3181818181818182,
+      "support": 17.0
+    },
+    "DOCTOR": {
+      "precision": 0.3333333333333333,
+      "recall": 0.23529411764705882,
+      "f1-score": 0.27586206896551724,
+      "support": 17.0
+    },
+    "ER": {
+      "precision": 0.7,
+      "recall": 0.4666666666666667,
+      "f1-score": 0.56,
+      "support": 15.0
+    },
+    "accuracy": 0.3673469387755102,
+    "macro avg": {
+      "precision": 0.4308641975308642,
+      "recall": 0.3712418300653595,
+      "f1-score": 0.3846812957157785,
+      "support": 49.0
+    },
+    "weighted avg": {
+      "precision": 0.41987906273620557,
+      "recall": 0.3673469387755102,
+      "f1-score": 0.37752543023478985,
+      "support": 49.0
+    }
+  }
+}

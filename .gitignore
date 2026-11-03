@@ -1,0 +1,62 @@
+@'
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Datasets
+data/raw/
+data/processed/
+datasets/
+*.parquet
+*.feather
+
+# Databases and vector stores
+*.db
+*.sqlite
+*.sqlite3
+chroma_db/
+vectorstore/
+chroma/
+
+# Model weights and checkpoints
+models/
+checkpoints/
+*.safetensors
+*.pt
+*.pth
+*.bin
+*.onnx
+
+# ML experiment outputs
+mlruns/
+mlartifacts/
+artifacts/
+outputs/
+logs/
+*.log
+
+# Archives
+*.zip
+*.7z
+*.rar
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+'@ | Set-Content .gitignore

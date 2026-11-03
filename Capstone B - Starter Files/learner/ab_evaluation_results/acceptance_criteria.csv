@@ -1,0 +1,5 @@
+Acceptance Criterion,Actual,Target,Result
+Accuracy >= 60%,62.5,>= 60%,PASS
+ER Recall >= 95%,100.0,>= 95%,PASS
+Undertriage <= 5%,0.0,<= 5%,PASS
+ER → WAIT = 0,0.0,0,PASS

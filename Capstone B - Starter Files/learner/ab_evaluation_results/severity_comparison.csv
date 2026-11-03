@@ -1,0 +1,51 @@
+case_number,patient_input,severity_before,severity_current,severity_change,true_triage_before,predicted_triage_before,predicted_triage_current,prediction_change
+25,I feel weak and tired. I can't taste or smell things as well as I used to. Sometimes my heart beats fast or I feel like I'm going to pass out.,3.0,,,DOCTOR,DOCTOR,DOCTOR,Unchanged
+3,I have a burning pain in my stomach that comes and goes. I also have a loss of appetite and energy and often feel very fatigued.,3.0,3.0,0.0,DOCTOR,WAIT,DOCTOR,Improved
+42,"I have a constant hunger and appetite. Sometimes my stomach will cramp and spasm. After I eat, I feel bloated and gassy.",3.0,2.0,-1.0,DOCTOR,WAIT,DOCTOR,Improved
+12,I have a lot of acid reflux and stomach pain. I also throw up a lot after I eat.,3.0,3.0,0.0,WAIT,DOCTOR,DOCTOR,Unchanged
+32,I have a lot of burping and belching. I get chest discomfort that goes up my neck and into my jaw and arm. I have pressure and tension in my chest.,4.0,4.0,0.0,WAIT,DOCTOR,DOCTOR,Unchanged
+41,I have a rash on my face. It is made up of blisters. The blisters have a yellow fluid coming out of them.,3.0,2.0,-1.0,WAIT,WAIT,DOCTOR,Regressed
+11,I have a rash on my skin that is very uncomfortable. There are also some odd patches of a different color and some pimples that resemble little knots.,3.0,2.0,-1.0,WAIT,WAIT,WAIT,Unchanged
+36,"I have a stiff neck and eye issues, and I've been hungry all the time.",2.0,3.0,1.0,WAIT,WAIT,DOCTOR,Regressed
+20,I have a stuffy nose and a blocked nose. I also have stiffness and chest pain at night. I can't taste or smell anything.,3.0,3.0,0.0,WAIT,DOCTOR,DOCTOR,Unchanged
+1,"I have been experiencing cramps in my legs for a few days now. I think there might be a bruise on my calves, but I'm not sure.",2.0,2.0,0.0,WAIT,WAIT,DOCTOR,Regressed
+49,"I have been feeling dizzy and lightheaded, and I have also had trouble keeping my balance. I have also had a headache that has not gone away.",3.0,3.0,0.0,DOCTOR,ER,DOCTOR,Improved
+34,"I have been having back pain, a lingering cough, and muscle weakness. I also have dizziness and balance issues, and my neck hurts.",3.0,3.0,0.0,WAIT,WAIT,DOCTOR,Regressed
+28,I have been taking this medication for a while and I have gained a lot of weight. I have also been craving different foods and have been eating more than I used to.,3.0,2.0,-1.0,DOCTOR,WAIT,DOCTOR,Improved
+14,"I have red, itchy, and scaly patches on my skin. They are often on my genitals, but I also have them on other parts of my body. They are sometimes painful and uncomfortable.",3.0,3.0,0.0,WAIT,WAIT,DOCTOR,Regressed
+7,I have trouble breathing when I exercise. I sweat a lot and get hot easily. I get yeast infections a lot.,3.0,2.0,-1.0,DOCTOR,DOCTOR,DOCTOR,Unchanged
+10,I have trouble swallowing food and it feels like food is getting stuck in my throat. I also feel bloated and belch a lot. I have a bad aftertaste every time I eat.,3.0,3.0,0.0,DOCTOR,DOCTOR,DOCTOR,Unchanged
+6,I have varicose veins in my legs. They are swollen and the blood vessels are more visible than usual. The swelling seems to be getting worse over time.,3.0,2.0,-1.0,WAIT,WAIT,WAIT,Unchanged
+4,"I'm burning up, and I can't catch my breath. I'm sweating and shivering, and I'm so tired. My heart is racing, and I'm coughing up brown stuff.",4.0,5.0,1.0,ER,WAIT,ER,Improved
+9,I'm feeling really hot. I can't breathe well. I'm sweating a lot. I'm shaking. I'm really tired. My heart is beating fast. I have some brown stuff coming up when I cough.,,5.0,,ER,,ER,Improved
+35,"I'm feeling really sick. I have a fever, and I'm dizzy and nauseous. My head is pounding, and my heart is racing. I can't think straight, and everything seems fuzzy.",4.0,,,DOCTOR,ER,ER,Unchanged
+38,I'm having trouble breathing and I feel really uncomfortable. I'm sweating a lot and my throat is full of phlegm. My chest hurts and my heart is racing. The mucus I'm coughing up is brown.,5.0,,,ER,WAIT,ER,Improved
+29,I'm having trouble breathing and I feel really uncomfortable. I'm sweating a lot and my throat is really sore. My chest hurts and my heart is beating fast. I'm coughing up a lot of mucus and it's brown.,5.0,5.0,0.0,ER,ER,ER,Unchanged
+40,"I'm having trouble breathing, and I have a really high fever. I'm sweating a lot and feeling really cold and tired. My heart is beating really fast, and I have some brownish sputum.",5.0,5.0,0.0,ER,WAIT,ER,Improved
+2,I'm having trouble breathing. I'm coughing up a lot of mucus. My chest hurts. I'm sweating a lot. I feel really sick.,5.0,5.0,0.0,ER,ER,ER,Unchanged
+18,"I'm having trouble breathing. I'm sweating and my heart is racing. My chest hurts and I'm coughing up dark, stringy mucus.",4.0,5.0,1.0,ER,ER,ER,Unchanged
+13,"I'm sweating a lot and can't catch my breath. I feel really sick, my throat is full of mucus, my heart is racing, and my chest hurts. I'm coughing up thick, rusty-colored mucus.",4.0,5.0,1.0,ER,DOCTOR,ER,Improved
+50,"I've been feeling really bad, with a high fever, shortness of breath, sweating, chills, and extreme fatigue. My heart is racing, and I've been coughing up a lot of brown phlegm.",4.0,5.0,1.0,ER,ER,ER,Unchanged
+24,"I've been feeling really cold and tired lately. I've been coughing a lot, and it hurts when I breathe. My heart is beating really fast, and when I cough, I cough up phlegm that's kind of a rusty color.",4.0,4.0,0.0,ER,ER,ER,Unchanged
+47,"I've been feeling really cold, and I'm so tired. I can't seem to shake this cough, and it hurts when I cough. My chest aches, and my heart is racing. The mucus I'm coughing up is a disgusting brownish color.",4.0,4.0,0.0,ER,ER,ER,Unchanged
+33,"I've been feeling really run down lately. I've had a cough that just won't go away, and it's starting to hurt when I cough. My chest feels tight, and my heart is racing. I've also been coughing up some phlegm that's a weird color.",4.0,3.0,-1.0,ER,ER,ER,Unchanged
+8,"I've been feeling really sick for the past few days. I have a high fever, chills, and intense itching. I've also been vomiting and sweating a lot. My head hurts and I feel nauseous and achy all over.",4.0,4.0,0.0,DOCTOR,ER,ER,Unchanged
+19,"I've been feeling really sick for the past few days. I have a high fever, shortness of breath, and I'm coughing up a lot of sputum. I'm also sweating, feeling chills, and I'm really tired.",4.0,5.0,1.0,ER,ER,ER,Unchanged
+21,"I've been feeling really sick lately. I have a fever, and I've been getting these itchy red spots all over my body. I'm not sure what's wrong with me, but I'm worried.",3.0,3.0,0.0,WAIT,DOCTOR,DOCTOR,Unchanged
+44,"I've been feeling really sick. I've had a fever, lost weight, and I've been really tired. My skin and my urine have turned yellow. I've also been having stomach pain.",4.0,4.0,0.0,DOCTOR,ER,DOCTOR,Improved
+17,"I've been feeling really unwell recently. I've had a high temperature, chills, a cough, and I've been struggling to breathe. I've also been sweating a lot and feeling really weak and tired. I've also had some thick, red phlegm.",4.0,5.0,1.0,ER,ER,ER,Unchanged
+45,"I've been feeling unwell for a while now. I have a headache, chest pain, and I feel unstable and have balance issues. I also have trouble focusing.",3.0,,,DOCTOR,DOCTOR,,Regressed
+48,"I've been feeling weak and achy lately, and my joints are swollen and stiff. It's hard to move around, and walking is especially painful.",3.0,3.0,0.0,WAIT,DOCTOR,DOCTOR,Unchanged
+5,"I've been having a fever, chills, and nausea. I've also been sweating a lot and have a headache. My muscles are sore and I've been scratching a lot.",3.0,3.0,0.0,DOCTOR,ER,DOCTOR,Improved
+27,"I've been having a lot of trouble breathing lately, and I've been coughing up a lot of phlegm. I've also been feeling really tired and weak, and I've been having chills and a fever. My chest hurts, and my heart is racing.",4.0,5.0,1.0,ER,DOCTOR,ER,Improved
+26,"I've been having back pain, a chronic cough, and muscle weakness. I'm also dizzy and losing my balance, and my neck hurts.",3.0,4.0,1.0,WAIT,WAIT,ER,Regressed
+43,"I've been having chest pain, dizziness, and a headache that feels like it's in a narrow zone around my head.",3.0,4.0,1.0,DOCTOR,WAIT,DOCTOR,Improved
+37,"I've been having chills, fatigue, and a cough for a few days. I've also been sweating a lot and feeling weak and unwell. I've had some thick, black phlegm, and my chest hurts. My heart has been racing, too.",3.0,,,ER,WAIT,,Changed - Still Incorrect
+46,"I've been having headaches and blurry vision, and I've also been getting acid reflux and indigestion after I eat.",3.0,3.0,0.0,WAIT,DOCTOR,DOCTOR,Unchanged
+16,"I've been having periodic coughing fits, terrible back pain, and limb weakness. I've been feeling neck pain as well as a dizzy and unstable sensation.",3.0,4.0,1.0,WAIT,ER,ER,Unchanged
+22,"I've been having trouble breathing, coughing a lot, and running a fever. I've also been coughing up a lot of thick, mucusy stuff, and I'm feeling really tired. I'm not sure what's going on, but I'm not feeling well.",4.0,5.0,1.0,DOCTOR,ER,ER,Unchanged
+31,I've been having trouble healing from my wound. My hands and feet have been tingling and going numb. I've also been feeling very weak.,3.0,3.0,0.0,DOCTOR,DOCTOR,DOCTOR,Unchanged
+23,I've been vomiting for the past few days and I have stomach cramps. I feel dizzy and weak. I also have a pain behind my eyes.,4.0,3.0,-1.0,DOCTOR,WAIT,DOCTOR,Improved
+39,"I've had a high fever, especially at night. It's been really bad. I've also had a headache, constipation, and diarrhea. I don't want to eat anything.",3.0,4.0,1.0,DOCTOR,DOCTOR,DOCTOR,Unchanged
+30,"My muscles are weak and my neck is stiff. My joints are swollen, which makes it hard for me to walk without feeling stiff. Walking is also uncomfortable.",3.0,3.0,0.0,WAIT,DOCTOR,DOCTOR,Unchanged
+15,"My neck is really stiff, and my muscles are weak. My joints are swollen, and it's hard for me to move without getting stiff. Walking is also unpleasant.",4.0,3.0,-1.0,WAIT,DOCTOR,DOCTOR,Unchanged
